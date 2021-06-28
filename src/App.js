@@ -1,22 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import {Col, Container, Row} from "react-bootstrap";
+
+import CodeWarsClient from "./Commponents/CodeWarsClient";
+import StreaksView from "./Commponents/StreaksView";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+          {/*<CodeWarsClient/>*/}
+
+          <Container fluid className={"container100h"}>
+              <Row className={"container50h"}>
+                  <Col className={"colBorder"}>
+                      <CodeWarsClient/>
+                  </Col>
+                  <Col className={"colBorder"}>
+                      <StreaksView/>
+                  </Col>
+              </Row>
+              <Row className={"container50h"}>
+                  <Col className={"colBorder"}>1 of 3</Col>
+                  <Col className={"colBorder"}>2 of 3</Col>
+                  <Col className={"colBorder"}>3 of 3</Col>
+              </Row>
+          </Container>
       </header>
     </div>
   );

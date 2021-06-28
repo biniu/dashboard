@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "biniu",
+      "username": "biniu",
+      "name": null,
+      "honor": 755,
+      "clan": null,
+      "leaderboardPosition": 26861,
+      "skills": [],
+      "ranks": {
+        "overall": {
+          "rank": -5,
+          "name": "5 kyu",
+          "color": "yellow",
+          "score": 623
+        },
+        "languages": {
+          "python": {
+            "rank": -6,
+            "name": "6 kyu",
+            "color": "yellow",
+            "score": 215
+          },
+          "cpp": {
+            "rank": -5,
+            "name": "5 kyu",
+            "color": "yellow",
+            "score": 375
+          },
+          "c": {
+            "rank": -8,
+            "name": "8 kyu",
+            "color": "white",
+            "score": 3
+          },
+          "shell": {
+            "rank": -8,
+            "name": "8 kyu",
+            "color": "white",
+            "score": 6
+          },
+          "typescript": {
+            "rank": -8,
+            "name": "8 kyu",
+            "color": "white",
+            "score": 2
+          },
+          "sql": {
+            "rank": -8,
+            "name": "8 kyu",
+            "color": "white",
+            "score": 8
+          },
+          "javascript": {
+            "rank": -7,
+            "name": "7 kyu",
+            "color": "white",
+            "score": 65
+          }
+        }
+      },
+      "codeChallenges": {
+        "totalAuthored": 0,
+        "totalCompleted": 172
+      }
+    }
+  ]
+}
+
