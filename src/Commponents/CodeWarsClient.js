@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row} from "react-bootstrap";
+import {Col, ProgressBar, Row} from "react-bootstrap";
 
 class CodeWarsClient extends React.Component {
 
@@ -36,7 +36,7 @@ class CodeWarsClient extends React.Component {
             {name: "2 dan", score: 97225},
         ]
         let percent = 0
-        let x, y = 0
+        let x,y = 0
         for (let i = 0; i < levels.length; i++) {
             if (levels[i].score > langObj.score) {
                 x = levels[i].score - levels[i - 1].score
@@ -61,8 +61,11 @@ class CodeWarsClient extends React.Component {
                 <td className={"cwTD"}
                     style={{color: langObj.color}}
                 >
-                    <progress max={x} value={y}> {percent} </progress>
-                    {percent}
+                    <ProgressBar now={percent} label={`${percent}%`} srOnly />
+                    {/*<progress max={x} value={y}*/}
+                    {/*          style={{color: langObj.color}}*/}
+                    {/*> {percent} </progress>*/}
+                    {/*{percent}*/}
                 </td>
 
             </>
