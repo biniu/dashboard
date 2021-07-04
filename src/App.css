@@ -50,39 +50,9 @@
 
 .colBorder {
   border: 1px solid red;
-}
+  height: 100%;
+  overflow: scroll;
 
-.codeWars {
-  text-align: left;
-  padding-right: 2px;
-}
-
-.cwTD {
-  padding-right: 5px;
-}
-
-.codeWarsTable {
-  text-align: left;
-  border-left: 1px solid white;
-  border-top: 1px solid white;
-  /*padding: 20px;*/
 }
 
 
-.streaksTable {
-  border: 3px solid black;
-  width: 100%;
-}
-
-.streaksTh {
-  width: 100%;
-}
-
-.streaksTr {
-  border: 2px solid red;
-}
-
-.streaksTd {
-  border: 1px solid blue;
-  width: 14%;
-}

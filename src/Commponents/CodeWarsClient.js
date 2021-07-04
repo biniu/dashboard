@@ -1,5 +1,14 @@
 import React from 'react';
-import {Col, ProgressBar, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
+
+import LangInfo from "./LangInfo"
+import StreaksView from "./StreaksView";
+
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
+
+import './CodeWars.css'
 
 class CodeWarsClient extends React.Component {
 
@@ -21,103 +30,57 @@ class CodeWarsClient extends React.Component {
         });
     }
 
-    LangDetails(langObj, langName) {
-
-        const levels = [
-            {name: "8 kyu", score: 0},
-            {name: "7 kyu", score: 20},
-            {name: "6 kyu", score: 76},
-            {name: "5 kyu", score: 229},
-            {name: "4 kyu", score: 643},
-            {name: "3 kyu", score: 1768},
-            {name: "2 kyu", score: 4829},
-            {name: "1 kyu", score: 13147},
-            {name: "1 dan", score: 35759},
-            {name: "2 dan", score: 97225},
-        ]
-        let percent = 0
-        let x,y = 0
-        for (let i = 0; i < levels.length; i++) {
-            if (levels[i].score > langObj.score) {
-                x = levels[i].score - levels[i - 1].score
-                y = langObj.score - levels[i - 1].score
-                percent = ((y / x) * 100).toFixed(1);
-                break
-            }
-        }
-
+    UserDetails() {
         return (
-            <>
-                <td className={"cwTD"}
-                    style={{color: langObj.color}}
-                >{langName}:
-                </td>
-                <td className={"cwTD"}
-                    style={{color: langObj.color}}
-                >{langObj.score}</td>
-                <td className={"cwTD"}
-                    style={{color: langObj.color}}
-                >{langObj.name}</td>
-                <td className={"cwTD"}
-                    style={{color: langObj.color}}
-                >
-                    <ProgressBar now={percent} label={`${percent}%`} srOnly />
-                    {/*<progress max={x} value={y}*/}
-                    {/*          style={{color: langObj.color}}*/}
-                    {/*> {percent} </progress>*/}
-                    {/*{percent}*/}
-                </td>
-
-            </>
-        )
-    }
-
-    LangOverview() {
-        const ranks = this.state.data['ranks']
-        let out = []
-
-        if (ranks) {
-            out = Object.keys(ranks['languages']).map((keyName, i) => (
+            <table className={"codeWarsTable"}>
                 <tr>
-                    {this.LangDetails(ranks['languages'][keyName], keyName)}
+                    <td className={"cwTD"}> -> User name:</td>
+                    <td className={"cwTD"}>{this.state.data['username']}</td>
                 </tr>
-            ))
-        }
-
-        return (
-            <>{out}</>
+                <tr>
+                    <td className={"cwTD"}> -> Honor:</td>
+                    <td className={"cwTD"}>{this.state.data['honor']}</td>
+                </tr>
+                <tr>
+                    <td className={"cwTD"}> -> Position:</td>
+                    <td className={"cwTD"}>{this.state.data['leaderboardPosition']}</td>
+                </tr>
+            </table>
         )
     }
 
     render() {
+        const percentage = 66;
+
         return (
-            <Row className={"codeWars"}>
-                <Row>
+            <Container fluid className={"codeWars"}>
+                <Row className={"rowBorder"}>
                     CodeWars
                 </Row>
-                <Row>
+                <Row className={"rowBorder"}>
                     <Col>
-                        <table className={"codeWarsTable"}>
-                            <tr>
-                                <td className={"cwTD"}> -> User name:</td>
-                                <td className={"cwTD"}>{this.state.data['username']}</td>
-                            </tr>
-                            <tr>
-                                <td className={"cwTD"}> -> Honor:</td>
-                                <td className={"cwTD"}>{this.state.data['honor']}</td>
-                            </tr>
-                            <tr>
-                                <td className={"cwTD"}> -> Position:</td>
-                                <td className={"cwTD"}>{this.state.data['leaderboardPosition']}</td>
-                            </tr>
-                        </table>
+                        <Row className={"rowBorder"}>
+                            {this.UserDetails()}
+                        </Row>
+                        <Row className={"rowBorder"}>
+                            <StreaksView/>
+                        </Row>
                     </Col>
 
-                    <Col>
-                        {this.LangOverview()}
-                    </Col>
+                <Col>
+                    <Row className={"rowBorder"}>
+                        <LangInfo langDetails={this.state.data['ranks']}/>
+                    </Row>
+                    <Row className={"rowBorder"}>
+                        <CircularProgressbar value={percentage} text={`${percentage}%`}
+                        />;
+
+
+                        {/*<LangInfo langDetails={this.state.data['ranks']}/>*/}
+                    </Row>
+                </Col>
                 </Row>
-            </Row>
+            </Container>
         )
     }
 }

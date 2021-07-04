@@ -4,7 +4,6 @@ import './App.css';
 import {Col, Container, Row} from "react-bootstrap";
 
 import CodeWarsClient from "./Commponents/CodeWarsClient";
-import StreaksView from "./Commponents/StreaksView";
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
                       <CodeWarsClient/>
                   </Col>
                   <Col className={"colBorder"}>
-                      <StreaksView/>
+                      {/*<StreaksView/>*/}
                   </Col>
               </Row>
               <Row className={"container50h"}>
