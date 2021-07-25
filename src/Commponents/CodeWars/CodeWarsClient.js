@@ -14,7 +14,7 @@ class CodeWarsClient extends React.Component {
 
     constructor(props) {
         super(props);
-        this.URI = 'http://localhost:3001/users/biniu'
+        this.URI = 'http://localhost:3001/codeWars'
         // this.URI = 'https://www.codewars.com/api/v1/users/biniu'
         this.state = {data: []};
     }
@@ -73,7 +73,7 @@ class CodeWarsClient extends React.Component {
                     </Row>
                     <Row className={"rowBorder"}>
                         <CircularProgressbar value={percentage} text={`${percentage}%`}
-                        />;
+                        />
 
 
                         {/*<LangInfo langDetails={this.state.data['ranks']}/>*/}

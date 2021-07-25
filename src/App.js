@@ -3,7 +3,8 @@ import './App.css';
 
 import {Col, Container, Row} from "react-bootstrap";
 
-import CodeWarsClient from "./Commponents/CodeWarsClient";
+import CodeWarsClient from "./Commponents/CodeWars/CodeWarsClient";
+import HabiticaClient from "./Commponents/Habitica/HabiticaClient";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
                   </Col>
               </Row>
               <Row className={"container50h"}>
-                  <Col className={"colBorder"}>1 of 3</Col>
+                  <Col className={"colBorder"}>
+                      <HabiticaClient/>
+                  </Col>
                   <Col className={"colBorder"}>2 of 3</Col>
                   <Col className={"colBorder"}>3 of 3</Col>
               </Row>

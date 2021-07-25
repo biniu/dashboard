@@ -1,70 +1,175 @@
 {
-  "users": [
-    {
-      "id": "biniu",
-      "username": "biniu",
-      "name": null,
-      "honor": 755,
-      "clan": null,
-      "leaderboardPosition": 26861,
-      "skills": [],
-      "ranks": {
-        "overall": {
+  "codeWars": {
+    "id": "biniu",
+    "username": "biniu",
+    "name": null,
+    "honor": 755,
+    "clan": null,
+    "leaderboardPosition": 26861,
+    "skills": [],
+    "ranks": {
+      "overall": {
+        "rank": -5,
+        "name": "5 kyu",
+        "color": "yellow",
+        "score": 623
+      },
+      "languages": {
+        "python": {
+          "rank": -6,
+          "name": "6 kyu",
+          "color": "yellow",
+          "score": 215
+        },
+        "cpp": {
           "rank": -5,
           "name": "5 kyu",
           "color": "yellow",
-          "score": 623
+          "score": 375
         },
-        "languages": {
-          "python": {
-            "rank": -6,
-            "name": "6 kyu",
-            "color": "yellow",
-            "score": 215
-          },
-          "cpp": {
-            "rank": -5,
-            "name": "5 kyu",
-            "color": "yellow",
-            "score": 375
-          },
-          "c": {
-            "rank": -8,
-            "name": "8 kyu",
-            "color": "white",
-            "score": 3
-          },
-          "shell": {
-            "rank": -8,
-            "name": "8 kyu",
-            "color": "white",
-            "score": 6
-          },
-          "typescript": {
-            "rank": -8,
-            "name": "8 kyu",
-            "color": "white",
-            "score": 2
-          },
-          "sql": {
-            "rank": -8,
-            "name": "8 kyu",
-            "color": "white",
-            "score": 8
-          },
-          "javascript": {
-            "rank": -7,
-            "name": "7 kyu",
-            "color": "white",
-            "score": 65
-          }
+        "c": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 3
+        },
+        "shell": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 6
+        },
+        "typescript": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 2
+        },
+        "sql": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 8
+        },
+        "javascript": {
+          "rank": -7,
+          "name": "7 kyu",
+          "color": "white",
+          "score": 65
         }
-      },
-      "codeChallenges": {
-        "totalAuthored": 0,
-        "totalCompleted": 172
       }
+    },
+    "codeChallenges": {
+      "totalAuthored": 0,
+      "totalCompleted": 172
     }
-  ]
+  },
+  "habitica": {
+    "success": true,
+    "data": [
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "completed": false,
+        "collapseChecklist": false,
+        "type": "todo",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "checklist": [
+          {
+            "completed": false,
+            "text": "sub 1",
+            "id": "b2d2ec0e-adee-4514-b48e-cf0d19ea4448"
+          },
+          {
+            "completed": false,
+            "text": "sub2",
+            "id": "6d98af8b-c3aa-4db8-bcc7-a0e69560915e"
+          }
+        ],
+        "reminders": [],
+        "createdAt": "2021-04-03T16:35:24.815Z",
+        "updatedAt": "2021-04-03T16:35:35.939Z",
+        "_id": "6ef6de17-b123-422d-a442-e49b7d6e3eee",
+        "text": "test sub task",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "6ef6de17-b123-422d-a442-e49b7d6e3eee"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "completed": false,
+        "collapseChecklist": false,
+        "type": "todo",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "checklist": [],
+        "reminders": [],
+        "createdAt": "2021-04-03T16:35:05.113Z",
+        "updatedAt": "2021-04-03T16:35:18.127Z",
+        "_id": "f7959d10-a2e3-46ff-8244-be262f71acec",
+        "text": "test due",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "date": "2021-04-10T16:35:00.000Z",
+        "id": "f7959d10-a2e3-46ff-8244-be262f71acec"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "completed": false,
+        "collapseChecklist": false,
+        "type": "todo",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "checklist": [],
+        "reminders": [],
+        "createdAt": "2021-04-03T16:34:50.958Z",
+        "updatedAt": "2021-04-03T16:34:50.958Z",
+        "_id": "38e4310f-7483-48ec-a82b-2a0a86b17e85",
+        "text": "test",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "38e4310f-7483-48ec-a82b-2a0a86b17e85"
+      }
+    ],
+    "notifications": [],
+    "appVersion": "4.188.3"
+  }
+
 }
 
