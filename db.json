@@ -65,110 +65,838 @@
     }
   },
   "habitica": {
-    "success": true,
-    "data": [
-      {
-        "challenge": {},
-        "group": {
-          "approval": {
-            "required": false,
-            "approved": false,
-            "requested": false
+    "todos": {
+      "success": true,
+      "data": [
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
           },
-          "assignedUsers": [],
-          "sharedCompletion": "singleCompletion"
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "todo",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "checklist": [
+            {
+              "completed": false,
+              "text": "sub 1",
+              "id": "b2d2ec0e-adee-4514-b48e-cf0d19ea4448"
+            },
+            {
+              "completed": false,
+              "text": "sub2",
+              "id": "6d98af8b-c3aa-4db8-bcc7-a0e69560915e"
+            }
+          ],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:35:24.815Z",
+          "updatedAt": "2021-04-03T16:35:35.939Z",
+          "_id": "6ef6de17-b123-422d-a442-e49b7d6e3eee",
+          "text": "test sub task",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "6ef6de17-b123-422d-a442-e49b7d6e3eee"
         },
-        "completed": false,
-        "collapseChecklist": false,
-        "type": "todo",
-        "notes": "",
-        "tags": [],
-        "value": 0,
-        "priority": 1,
-        "attribute": "str",
-        "byHabitica": false,
-        "checklist": [
-          {
-            "completed": false,
-            "text": "sub 1",
-            "id": "b2d2ec0e-adee-4514-b48e-cf0d19ea4448"
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
           },
-          {
-            "completed": false,
-            "text": "sub2",
-            "id": "6d98af8b-c3aa-4db8-bcc7-a0e69560915e"
-          }
-        ],
-        "reminders": [],
-        "createdAt": "2021-04-03T16:35:24.815Z",
-        "updatedAt": "2021-04-03T16:35:35.939Z",
-        "_id": "6ef6de17-b123-422d-a442-e49b7d6e3eee",
-        "text": "test sub task",
-        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
-        "id": "6ef6de17-b123-422d-a442-e49b7d6e3eee"
-      },
-      {
-        "challenge": {},
-        "group": {
-          "approval": {
-            "required": false,
-            "approved": false,
-            "requested": false
-          },
-          "assignedUsers": [],
-          "sharedCompletion": "singleCompletion"
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "todo",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:35:05.113Z",
+          "updatedAt": "2021-04-03T16:35:18.127Z",
+          "_id": "f7959d10-a2e3-46ff-8244-be262f71acec",
+          "text": "test due",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "date": "2021-04-10T16:35:00.000Z",
+          "id": "f7959d10-a2e3-46ff-8244-be262f71acec"
         },
-        "completed": false,
-        "collapseChecklist": false,
-        "type": "todo",
-        "notes": "",
-        "tags": [],
-        "value": 0,
-        "priority": 1,
-        "attribute": "str",
-        "byHabitica": false,
-        "checklist": [],
-        "reminders": [],
-        "createdAt": "2021-04-03T16:35:05.113Z",
-        "updatedAt": "2021-04-03T16:35:18.127Z",
-        "_id": "f7959d10-a2e3-46ff-8244-be262f71acec",
-        "text": "test due",
-        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
-        "date": "2021-04-10T16:35:00.000Z",
-        "id": "f7959d10-a2e3-46ff-8244-be262f71acec"
-      },
-      {
-        "challenge": {},
-        "group": {
-          "approval": {
-            "required": false,
-            "approved": false,
-            "requested": false
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
           },
-          "assignedUsers": [],
-          "sharedCompletion": "singleCompletion"
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "todo",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:34:50.958Z",
+          "updatedAt": "2021-04-03T16:34:50.958Z",
+          "_id": "38e4310f-7483-48ec-a82b-2a0a86b17e85",
+          "text": "test",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "38e4310f-7483-48ec-a82b-2a0a86b17e85"
+        }
+      ],
+      "notifications": [],
+      "appVersion": "4.188.3"
+    },
+    "habits": {
+      "success": true,
+      "data": [
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": true,
+          "counterUp": 4,
+          "counterDown": 2,
+          "frequency": "daily",
+          "history": [
+            {
+              "date": 1617462021462,
+              "value": 1.9747007695148526,
+              "scoredUp": 4,
+              "scoredDown": 2
+            }
+          ],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 1.9747007695148526,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T15:00:15.400Z",
+          "updatedAt": "2021-04-03T15:00:21.472Z",
+          "_id": "09383e3d-17e2-4935-b7b7-6e8ea49fb4aa",
+          "text": "history test ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "09383e3d-17e2-4935-b7b7-6e8ea49fb4aa"
         },
-        "completed": false,
-        "collapseChecklist": false,
-        "type": "todo",
-        "notes": "",
-        "tags": [],
-        "value": 0,
-        "priority": 1,
-        "attribute": "str",
-        "byHabitica": false,
-        "checklist": [],
-        "reminders": [],
-        "createdAt": "2021-04-03T16:34:50.958Z",
-        "updatedAt": "2021-04-03T16:34:50.958Z",
-        "_id": "38e4310f-7483-48ec-a82b-2a0a86b17e85",
-        "text": "test",
-        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
-        "id": "38e4310f-7483-48ec-a82b-2a0a86b17e85"
-      }
-    ],
-    "notifications": [],
-    "appVersion": "4.188.3"
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": true,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "daily",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [
+            "307e8b69-99ff-42f7-8f96-c5940cfeeb40"
+          ],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:59:29.285Z",
+          "updatedAt": "2021-04-03T15:00:06.988Z",
+          "_id": "8d468ecc-7a61-4f1f-817f-533fc0d822e9",
+          "text": "habit with tag ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "8d468ecc-7a61-4f1f-817f-533fc0d822e9"
+        },
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": true,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "monthly",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:57:55.981Z",
+          "updatedAt": "2021-04-03T14:58:09.809Z",
+          "_id": "d737952c-91d3-4251-83d9-e9424954a1a1",
+          "text": "test monthly",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "d737952c-91d3-4251-83d9-e9424954a1a1"
+        },
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": true,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "weekly",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:57:51.190Z",
+          "updatedAt": "2021-04-03T14:58:17.612Z",
+          "_id": "463c22b0-146c-4cbb-a355-c521ded82681",
+          "text": "test weekly",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "463c22b0-146c-4cbb-a355-c521ded82681"
+        },
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": true,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "daily",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:57:46.131Z",
+          "updatedAt": "2021-04-03T14:58:23.957Z",
+          "_id": "f2ffff76-c266-48a7-9573-b8234b16e92d",
+          "text": "test daily",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "f2ffff76-c266-48a7-9573-b8234b16e92d"
+        },
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": true,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "daily",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:54:49.228Z",
+          "updatedAt": "2021-04-03T14:54:49.228Z",
+          "_id": "e10002be-1c71-40a2-ac24-9e9d66f58308",
+          "text": "test both",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "e10002be-1c71-40a2-ac24-9e9d66f58308"
+        },
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": true,
+          "down": false,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "daily",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:54:43.452Z",
+          "updatedAt": "2021-04-03T14:55:09.757Z",
+          "_id": "9cb24cf3-4cd8-49dc-9e22-7c4799def8b0",
+          "text": "test only positive ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "9cb24cf3-4cd8-49dc-9e22-7c4799def8b0"
+        },
+        {
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "up": false,
+          "down": true,
+          "counterUp": 0,
+          "counterDown": 0,
+          "frequency": "daily",
+          "history": [],
+          "type": "habit",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "reminders": [],
+          "createdAt": "2021-04-03T14:54:36.784Z",
+          "updatedAt": "2021-04-03T14:55:15.673Z",
+          "_id": "5c254c47-7449-4bab-81eb-92be8d825d81",
+          "text": "test only negative",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "id": "5c254c47-7449-4bab-81eb-92be8d825d81"
+        }
+      ],
+      "notifications": [],
+      "appVersion": "4.188.3"
+    },
+    "dailys" : {
+      "success": true,
+      "data": [
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": true,
+            "su": true
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "yearly",
+          "everyX": 1,
+          "streak": 0,
+          "nextDue": [
+            "2022-04-02T22:00:00.000Z",
+            "2023-04-02T22:00:00.000Z",
+            "2024-04-02T22:00:00.000Z",
+            "2025-04-02T22:00:00.000Z",
+            "2026-04-02T22:00:00.000Z",
+            "2027-04-02T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:30:17.554Z",
+          "updatedAt": "2021-04-03T16:32:40.802Z",
+          "_id": "4e1b0d7c-cca6-463c-ab97-6e6b861327f7",
+          "text": "test yearly ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "4e1b0d7c-cca6-463c-ab97-6e6b861327f7"
+        },
+        {
+          "repeat": {
+            "m": false,
+            "t": false,
+            "w": false,
+            "th": false,
+            "f": false,
+            "s": true,
+            "su": false
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "monthly",
+          "everyX": 1,
+          "streak": 0,
+          "nextDue": [
+            "2021-05-02T22:00:00.000Z",
+            "2021-06-02T22:00:00.000Z",
+            "2021-07-02T22:00:00.000Z",
+            "2021-08-02T22:00:00.000Z",
+            "2021-09-02T22:00:00.000Z",
+            "2021-10-02T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [
+            3
+          ],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:30:06.283Z",
+          "updatedAt": "2021-04-03T16:32:47.401Z",
+          "_id": "0d69f90a-1f5f-4dc4-b73c-4d6dc1360b35",
+          "text": "test monthly ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "0d69f90a-1f5f-4dc4-b73c-4d6dc1360b35"
+        },
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": false,
+            "su": false
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "weekly",
+          "everyX": 1,
+          "streak": 0,
+          "nextDue": [
+            "2021-04-04T22:00:00.000Z",
+            "2021-04-05T22:00:00.000Z",
+            "2021-04-06T22:00:00.000Z",
+            "2021-04-07T22:00:00.000Z",
+            "2021-04-08T22:00:00.000Z",
+            "2021-04-11T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:31:41.500Z",
+          "updatedAt": "2021-04-03T16:32:02.438Z",
+          "_id": "8928479c-b166-4c57-b52d-c86d8833648e",
+          "text": "test weekly  some days",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": false,
+          "id": "8928479c-b166-4c57-b52d-c86d8833648e"
+        },
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": true,
+            "su": true
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "weekly",
+          "everyX": 1,
+          "streak": 0,
+          "nextDue": [
+            "2021-04-04T22:00:00.000Z",
+            "2021-04-05T22:00:00.000Z",
+            "2021-04-06T22:00:00.000Z",
+            "2021-04-07T22:00:00.000Z",
+            "2021-04-08T22:00:00.000Z",
+            "2021-04-09T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:29:52.241Z",
+          "updatedAt": "2021-04-03T16:31:36.720Z",
+          "_id": "2da12218-bd6f-4dc2-92f2-feb06e69c8b8",
+          "text": "test weekly ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "2da12218-bd6f-4dc2-92f2-feb06e69c8b8"
+        },
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": true,
+            "su": true
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "daily",
+          "everyX": 1,
+          "streak": 0,
+          "nextDue": [
+            "2021-04-03T22:00:00.000Z",
+            "2021-04-04T22:00:00.000Z",
+            "2021-04-05T22:00:00.000Z",
+            "2021-04-06T22:00:00.000Z",
+            "2021-04-07T22:00:00.000Z",
+            "2021-04-08T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:29:45.847Z",
+          "updatedAt": "2021-04-03T16:31:27.415Z",
+          "_id": "64c5f301-accb-4c49-abba-3e017918976b",
+          "text": "test daily ",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "64c5f301-accb-4c49-abba-3e017918976b"
+        },
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": true,
+            "su": true
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "daily",
+          "everyX": 2,
+          "streak": 0,
+          "nextDue": [
+            "2021-04-04T22:00:00.000Z",
+            "2021-04-06T22:00:00.000Z",
+            "2021-04-08T22:00:00.000Z",
+            "2021-04-10T22:00:00.000Z",
+            "2021-04-12T22:00:00.000Z",
+            "2021-04-14T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:30:59.887Z",
+          "updatedAt": "2021-04-03T16:31:10.962Z",
+          "_id": "88f91a7b-51c4-41b1-a504-ba676607d2ad",
+          "text": "test every 2 day",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "88f91a7b-51c4-41b1-a504-ba676607d2ad"
+        },
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": true,
+            "su": true
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "weekly",
+          "everyX": 1,
+          "streak": 1,
+          "nextDue": [
+            "2021-04-04T22:00:00.000Z",
+            "2021-04-05T22:00:00.000Z",
+            "2021-04-06T22:00:00.000Z",
+            "2021-04-07T22:00:00.000Z",
+            "2021-04-08T22:00:00.000Z",
+            "2021-04-09T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [
+            {
+              "date": 1617467590487,
+              "value": 1
+            }
+          ],
+          "completed": true,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 1,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:29:22.681Z",
+          "updatedAt": "2021-04-03T16:33:10.498Z",
+          "_id": "1ffd0883-d519-4b5b-8701-781bd77db900",
+          "text": "test done",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "1ffd0883-d519-4b5b-8701-781bd77db900"
+        },
+        {
+          "repeat": {
+            "m": true,
+            "t": true,
+            "w": true,
+            "th": true,
+            "f": true,
+            "s": true,
+            "su": true
+          },
+          "challenge": {},
+          "group": {
+            "approval": {
+              "required": false,
+              "approved": false,
+              "requested": false
+            },
+            "assignedUsers": [],
+            "sharedCompletion": "singleCompletion"
+          },
+          "frequency": "weekly",
+          "everyX": 1,
+          "streak": 0,
+          "nextDue": [
+            "2021-04-04T22:00:00.000Z",
+            "2021-04-05T22:00:00.000Z",
+            "2021-04-06T22:00:00.000Z",
+            "2021-04-07T22:00:00.000Z",
+            "2021-04-08T22:00:00.000Z",
+            "2021-04-09T22:00:00.000Z"
+          ],
+          "yesterDaily": true,
+          "history": [],
+          "completed": false,
+          "collapseChecklist": false,
+          "type": "daily",
+          "notes": "",
+          "tags": [],
+          "value": 0,
+          "priority": 1,
+          "attribute": "str",
+          "byHabitica": false,
+          "startDate": "2021-04-02T22:00:00.000Z",
+          "daysOfMonth": [],
+          "weeksOfMonth": [],
+          "checklist": [],
+          "reminders": [],
+          "createdAt": "2021-04-03T16:29:12.680Z",
+          "updatedAt": "2021-04-03T16:29:12.680Z",
+          "_id": "a9ba3e97-eec8-4a57-8c85-e7bb5dbc5ac2",
+          "text": "test not done",
+          "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+          "isDue": true,
+          "id": "a9ba3e97-eec8-4a57-8c85-e7bb5dbc5ac2"
+        }
+      ],
+      "notifications": [],
+      "appVersion": "4.188.3"
+    }
   }
 
 }
