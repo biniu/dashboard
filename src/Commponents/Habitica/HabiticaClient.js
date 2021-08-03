@@ -4,6 +4,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import {CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
+import './HabiticaClient.css'
+
 class HabiticaClient extends React.Component {
 
     constructor(props) {
@@ -43,9 +45,9 @@ class HabiticaClient extends React.Component {
 
         if (tasksList) {
             tasks = Object.keys(tasksList['data']).map((keyName, i) => (
-                <li>
+                <tr>
                     {tasksList['data'][i]['text']}
-                </li>
+                </tr>
             ))
         }
 
@@ -54,42 +56,53 @@ class HabiticaClient extends React.Component {
 
         if (habitsList) {
             habits = Object.keys(habitsList['data']).map((keyName, i) => (
-                <li>
+                <tr>
                     {habitsList['data'][i]['text']}
-                </li>
+                </tr>
             ))
         }
 
-        const dailysList = this.state.data['dailys']
-        let dailys = []
+        const dailiesList = this.state.data['dailies']
+        let dailies = []
 
-        if (dailysList) {
-            dailys = Object.keys(dailysList['data']).map((keyName, i) => (
-                <li>
-                    {dailysList['data'][i]['text']}
-                </li>
+        if (dailiesList) {
+            dailies = Object.keys(dailiesList['data']).map((keyName, i) => (
+                <tr>
+                    <td>
+                        {dailiesList['data'][i]['text']}
+                    </td>
+                    <td>
+                        STATUS
+                    </td>
+                </tr>
             ))
         }
 
         return (
-            <Container fluid>
+            <Container fluid className={"habiticaClient"}>
                 <Row className={"rowBorder"}>
-                    Tasks
-                    <ul>
-                    {tasks}
-                    </ul>
-                </Row>
-                <Row className={"rowBorder"}>
-                    Habits
-                    <ul>
-                        {habits}
-                    </ul>
-                </Row>
-                <Row className={"rowBorder"}>
-                    Dailys
-                    <ul>
-                        {dailys}
-                    </ul>
+                    <Col>
+                        Tasks
+                        <table>
+                            {tasks}
+                        </table>
+                    </Col>
+
+                    <Col>
+                        <Row className={"rowBorder"}>
+                            Dailies
+                            <table>
+                                {dailies}
+                            </table>
+                        </Row>
+
+                        <Row className={"rowBorder"}>
+                            Habits
+                            <table>
+                                {habits}
+                            </table>
+                        </Row>
+                    </Col>
                 </Row>
             </Container>
         )

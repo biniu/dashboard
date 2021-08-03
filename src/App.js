@@ -23,10 +23,9 @@ function App() {
                   </Col>
               </Row>
               <Row className={"container50h"}>
-                  <Col className={"colBorder"}>
+                  <Col sm={8} className={"colBorder"}>
                       <HabiticaClient/>
                   </Col>
-                  <Col className={"colBorder"}>2 of 3</Col>
                   <Col className={"colBorder"}>3 of 3</Col>
               </Row>
           </Container>
