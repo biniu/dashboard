@@ -443,7 +443,7 @@
       "notifications": [],
       "appVersion": "4.188.3"
     },
-    "dailies" : {
+    "dailies": {
       "success": true,
       "data": [
         {
@@ -897,7 +897,414 @@
       "notifications": [],
       "appVersion": "4.188.3"
     }
+  },
+  "hackerrank": {
+    "scores_elo": [
+      {
+        "track_id": 2,
+        "name": "Artificial Intelligence",
+        "slug": "ai",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 103792,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 3,
+        "name": "Algorithms",
+        "slug": "algorithms",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 186.0,
+          "rank": 639366,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 5,
+        "name": "Functional Programming",
+        "slug": "fp",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 98605,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 6,
+        "name": "Linux Shell",
+        "slug": "shell",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 239928,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 12,
+        "name": "Python",
+        "slug": "python",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 1494800,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 13,
+        "name": "C++",
+        "slug": "cpp",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 100.0,
+          "rank": 189695,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 14,
+        "name": "Ruby",
+        "slug": "ruby",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 70829,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 15,
+        "name": "Java",
+        "slug": "java",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 1222852,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 16,
+        "name": "Databases",
+        "slug": "databases",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 158082,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 17,
+        "name": "Data Structures",
+        "slug": "data-structures",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 105.0,
+          "rank": 277180,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 18,
+        "name": "SQL",
+        "slug": "sql",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 972800,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 19,
+        "name": "Regex",
+        "slug": "regex",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 99426,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 20,
+        "name": "Security",
+        "slug": "security",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 33396,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 21,
+        "name": "Distributed Systems",
+        "slug": "distributed-systems",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 45482,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 22,
+        "name": "Mathematics",
+        "slug": "mathematics",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 219580,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 24,
+        "name": "Tutorials",
+        "slug": "tutorials",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 1859007,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 26,
+        "name": "General Programming",
+        "slug": "general-programming",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 1,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 27,
+        "name": "C",
+        "slug": "c",
+        "practice": {
+          "hacker_id": 9607338,
+          "score": 0.0,
+          "rank": 457719,
+          "location_on_leaderboard": []
+        },
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        }
+      },
+      {
+        "track_id": 0,
+        "name": "General",
+        "slug": "general",
+        "contest": {
+          "score": 0,
+          "rank": "N/A",
+          "level": 5,
+          "medals": null
+        }
+      }
+    ],
+    "submission_histories": {
+      "2020-09-01": "8",
+      "2020-09-02": "14",
+      "2020-09-03": "1",
+      "2020-09-04": "1",
+      "2020-09-07": "2",
+      "2020-09-16": "1",
+      "2020-09-22": "6",
+      "2020-09-23": "2",
+      "2020-09-24": "4",
+      "2020-09-25": "3",
+      "2020-09-28": "1",
+      "2020-10-02": "1",
+      "2020-10-07": "3"
+    }
   }
-
 }
 

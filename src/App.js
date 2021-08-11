@@ -5,6 +5,7 @@ import {Col, Container, Row} from "react-bootstrap";
 
 import CodeWarsClient from "./Commponents/CodeWars/CodeWarsClient";
 import HabiticaClient from "./Commponents/Habitica/HabiticaClient";
+import HackerRankClient from "./Commponents/Hackerrank/HackerRankClient";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
                       <CodeWarsClient/>
                   </Col>
                   <Col className={"colBorder"}>
-                      {/*<StreaksView/>*/}
+                      <HackerRankClient/>
                   </Col>
               </Row>
               <Row className={"container50h"}>

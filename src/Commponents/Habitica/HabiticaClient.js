@@ -72,7 +72,9 @@ class HabiticaClient extends React.Component {
                         {dailiesList['data'][i]['text']}
                     </td>
                     <td>
-                        STATUS
+                        <span>1</span>
+                        <span>1</span>
+                        <span>1</span>
                     </td>
                 </tr>
             ))
