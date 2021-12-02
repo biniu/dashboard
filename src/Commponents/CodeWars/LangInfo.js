@@ -5,6 +5,7 @@ import './CodeWars.css'
 
 
 function LangDetails(langObj, langName) {
+
     const levels = [
         {name: "8 kyu", score: 0},
         {name: "7 kyu", score: 20},
@@ -32,7 +33,7 @@ function LangDetails(langObj, langName) {
         <>
             <td className={"cwTD"}
                 style={{color: langObj.color}}
-            >{langName}:
+            >{langObj.name}:
             </td>
             <td className={"cwTD"}
                 style={{color: langObj.color}}
@@ -49,20 +50,19 @@ function LangDetails(langObj, langName) {
                 > {percent} </progress>
                 {percent}%
             </td>
-
         </>
     )
 }
 
 export default function LangInfo() {
-    let [userData, setUserData] = useState('');
+    let [data, setData] = useState('');
     const fetchData = useCallback(() => {
         axios({
             "method": "GET",
-            "url": "http://localhost:3001/codeWarsUser",
+            "url": "http://127.0.0.1:8000/code_wars/LanguageScores/",
         })
             .then((response) => {
-                setUserData(response.data)
+                setData(response.data)
             })
             .catch((error) => {
                 console.log(error)
@@ -72,20 +72,27 @@ export default function LangInfo() {
         fetchData()
     }, [fetchData])
 
-    let data = <tr/>
+    let langData = <tr/>
 
-    if(userData['ranks']) {
-        console.log(userData['ranks']['languages'])
-        data = Object.keys(userData['ranks']['languages']).map((keyName, i) => (
+    console.log(data['results'])
+
+    if(data['results']) {
+        console.log(data['results'][0])
+        // langData = Object.keys(data['results']).map((keyName, i) => (
+        //     <tr>
+        //         {LangDetails(data['ranks']['languages'][keyName], keyName)}
+        //     </tr>
+        // ))
+        langData = data['results'].map((lang) => (
             <tr>
-                {LangDetails(userData['ranks']['languages'][keyName], keyName)}
+                {LangDetails(lang)}
             </tr>
         ))
     }
 
     return (
         <table className={"codeWarsTable"}>
-            {data}
+            {langData}
         </table>
     );
 }

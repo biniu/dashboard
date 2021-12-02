@@ -5,14 +5,18 @@ import './CodeWars.css'
 
 
 export default function UserDetails() {
-    let [userData, setUserData] = useState('');
+    let [data, setData] = useState('');
     const fetchData = useCallback(() => {
         axios({
             "method": "GET",
-            "url": "http://localhost:3001/codeWarsUser",
+            "url": "http://127.0.0.1:8000/code_wars/UserStatistics/",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
         })
             .then((response) => {
-                setUserData(response.data)
+                setData(response.data)
             })
             .catch((error) => {
                 console.log(error)
@@ -22,12 +26,18 @@ export default function UserDetails() {
         fetchData()
     }, [fetchData])
 
+    let userData = ""
+
+    if (data['results']) {
+        console.log(data['results'][0])
+        userData = data['results'][0]
+    }
 
     return (
         <table className={"codeWarsTable"}>
             <tr>
                 <td className={"cwTD"}> -> User name:</td>
-                <td className={"cwTD"}>{userData['username']}</td>
+                <td className={"cwTD"}>Biniu</td>
             </tr>
             <tr>
                 <td className={"cwTD"}> -> Honor:</td>
