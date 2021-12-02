@@ -3,6 +3,7 @@ import './App.css';
 
 import {Col, Container, Row} from "react-bootstrap";
 
+
 import CodeWarsClient from "./Commponents/CodeWars/CodeWarsClient";
 import HabiticaClient from "./Commponents/Habitica/HabiticaClient";
 
@@ -11,13 +12,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
-          {/*<CodeWarsClient/>*/}
-
           <Container fluid className={"container100h"}>
               <Row className={"container50h"}>
                   <Col className={"colBorder"}>
-                      <CodeWarsClient/>
+                        <CodeWarsClient/>
                   </Col>
                   <Col className={"colBorder"}>
                       ToDo
@@ -25,7 +23,7 @@ function App() {
               </Row>
               <Row className={"container50h"}>
                   <Col sm={8} className={"colBorder"}>
-                      <HabiticaClient/>
+                      {/*<HabiticaClient/>*/}
                   </Col>
                   <Col className={"colBorder"}>
                       ToDo
