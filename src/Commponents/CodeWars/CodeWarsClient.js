@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createContext} from "react";
 
 import './CodeWars.css'
 import {Col, Container, Row} from "react-bootstrap";
@@ -7,6 +7,8 @@ import UserDetails from "./UserDetails";
 import StreaksView from "./StreaksView";
 import {CircularProgressbar} from "react-circular-progressbar";
 import LangInfo from "./LangInfo";
+
+export const UserName = createContext("biniu");
 
 export default function CodeWarsClient() {
     const percentage = 66;
@@ -19,16 +21,18 @@ export default function CodeWarsClient() {
             <Row className={"rowBorder"}>
                 <Col>
                     <Row className={"rowBorder"}>
-                        <UserDetails/>
+                        <UserName.Provider value={"biniu"}>
+                            <UserDetails/>
+                        </UserName.Provider>
                     </Row>
                     <Row className={"rowBorder"}>
-                        <StreaksView/>
+                        {/*<StreaksView/>*/}
                     </Row>
                 </Col>
 
                 <Col>
                     <Row className={"rowBorder"}>
-                        <LangInfo/>
+                        {/*<LangInfo/>*/}
                     </Row>
                     {/*<Row className={"rowBorder"}>*/}
                     {/*    <CircularProgressbar value={percentage} text={`${percentage}%`}*/}
@@ -38,6 +42,7 @@ export default function CodeWarsClient() {
                 </Col>
             </Row>
         </Container>
+
 
 );
 }
