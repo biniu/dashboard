@@ -9,24 +9,33 @@ import './CodeWars.css'
 
 export default function UserDetails() {
     const userName = useContext(UserName)
-    const url = "http://127.0.0.1:8000/code_wars/UserStatistics/?last_update=" + getTodayDate()
-    const urlYesterday = "http://127.0.0.1:8000/code_wars/UserStatistics/?last_update=" + getYesterdayDate()
+    const url = "http://127.0.0.1:8000/code_wars/UserStatistics/"
 
-    let data = Request(url)
-    let dataYesterday = Request(urlYesterday)
+    const data = Request(url, false)
 
-    const position = () => {
-        if (data[0]['leaderboardPosition'] === dataYesterday[0]['leaderboardPosition']) {
-            return data[0]['leaderboardPosition'] + " No Changes"
-        } else if (data[0]['leaderboardPosition'] < dataYesterday[0]['leaderboardPosition']) {
-            return data[0]['leaderboardPosition'] + " Up"
+    const position = (last, penultimate) => {
+        if (last['leaderboardPosition'] === penultimate['leaderboardPosition']) {
+            return last['leaderboardPosition'] + " No Changes"
+        } else if (last['leaderboardPosition'] < penultimate['leaderboardPosition']) {
+            return last['leaderboardPosition'] + " Up"
         } else {
-            return data[0]['leaderboardPosition'] + " Down"
+            return last['leaderboardPosition'] + " Down"
         }
     }
 
     const out = () => {
-        if (data && dataYesterday) {
+        if (data) {
+            const last = data['results'].find((score, index) => {
+                if (score.id === data.count)
+                    return true;
+            })
+            const penultimate = data['results'].find((score, index) => {
+                if (score.id === data.count - 1)
+                    return true;
+            })
+            console.log(last)
+            console.log(penultimate)
+
             return (
                 <table className={"codeWarsTable"}>
                     <tr>
@@ -35,15 +44,15 @@ export default function UserDetails() {
                     </tr>
                     <tr>
                         <td className={"cwTD"}> -> Honor:</td>
-                        <td className={"cwTD"}>{data[0]['honor']}</td>
+                        <td className={"cwTD"}>{last['honor']}</td>
                     </tr>
                     <tr>
                         <td className={"cwTD"}> -> Position:</td>
-                        <td className={"cwTD"}>{position()}</td>
+                        <td className={"cwTD"}>{position(last, penultimate)}</td>
                     </tr>
                     <tr>
                         <td className={"cwTD"}> -> Completed kata:</td>
-                        <td className={"cwTD"}>{data[0]['kata_completed']}</td>
+                        <td className={"cwTD"}>{last['kata_completed']}</td>
                     </tr>
 
                 </table>
