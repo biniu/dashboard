@@ -1,10 +1,14 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback, useContext, useState} from "react";
 import axios from "axios";
 
 import './CodeWars.css'
+import {UserName} from "./CodeWarsClient";
+import {Request} from "../../utils/utils";
 
 
-function LangDetails(langObj, langName) {
+const LangDetails = (lang_obj, lang_details) => {
+    const lang_info = lang_details.filter(
+        lang_details => lang_details.lang_id === lang_obj.id).slice(-1)[0]
 
     const levels = [
         {name: "8 kyu", score: 0},
@@ -18,12 +22,13 @@ function LangDetails(langObj, langName) {
         {name: "1 dan", score: 35759},
         {name: "2 dan", score: 97225},
     ]
+
     let percent = 0
-    let x,y = 0
+    let x, y = 0
     for (let i = 0; i < levels.length; i++) {
-        if (levels[i].score > langObj.score) {
+        if (levels[i].score > lang_info.score) {
             x = levels[i].score - levels[i - 1].score
-            y = langObj.score - levels[i - 1].score
+            y = lang_info.score - levels[i - 1].score
             percent = ((y / x) * 100).toFixed(1);
             break
         }
@@ -31,23 +36,16 @@ function LangDetails(langObj, langName) {
 
     return (
         <>
-            <td className={"cwTD"}
-                style={{color: langObj.color}}
-            >{langObj.name}:
+            <td className={"cwTD"} style={{color: lang_info.color}}>
+                {lang_obj.name}:
             </td>
-            <td className={"cwTD"}
-                style={{color: langObj.color}}
-            >{langObj.score}</td>
-            <td className={"cwTD"}
-                style={{color: langObj.color}}
-            >{langObj.name}</td>
-            <td className={"cwTD"}
-                style={{color: langObj.color}}
-            >
+            <td className={"cwTD"} style={{color: lang_info.color}}>
+                {lang_info.score}
+            </td>
+            <td className={"cwTD"} style={{color: lang_info.color}}>
                 {/*<ProgressBar now={percent} label={`${percent}%`} srOnly />*/}
 
-                <progress max={x} value={y}
-                > {percent} </progress>
+                <progress max={x} value={y}> {percent} </progress>
                 {percent}%
             </td>
         </>
@@ -55,37 +53,22 @@ function LangDetails(langObj, langName) {
 }
 
 export default function LangInfo() {
-    let [data, setData] = useState('');
-    const fetchData = useCallback(() => {
-        axios({
-            "method": "GET",
-            "url": "http://127.0.0.1:8000/code_wars/LanguageScores/",
-        })
-            .then((response) => {
-                setData(response.data)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }, [])
-    React.useEffect(() => {
-        fetchData()
-    }, [fetchData])
+    // const userName = useContext(UserName)
+    const url_lang_list = "http://127.0.0.1:8000/code_wars/LanguageInfo/"
+    const lang_list = Request(url_lang_list, false)
+
+    const url_lang_details = "http://127.0.0.1:8000/code_wars/LanguageScores/"
+    console.log(url_lang_details)
+    const lang_data = Request(url_lang_details, false)
+    console.log(lang_data)
 
     let langData = <tr/>
 
-    console.log(data['results'])
-
-    if(data['results']) {
-        console.log(data['results'][0])
-        // langData = Object.keys(data['results']).map((keyName, i) => (
-        //     <tr>
-        //         {LangDetails(data['ranks']['languages'][keyName], keyName)}
-        //     </tr>
-        // ))
-        langData = data['results'].map((lang) => (
+    if (lang_list['results'] && lang_data['results']) {
+        console.log(lang_list['results'])
+        langData = lang_list['results'].map((lang) => (
             <tr>
-                {LangDetails(lang)}
+                {LangDetails(lang, lang_data['results'])}
             </tr>
         ))
     }

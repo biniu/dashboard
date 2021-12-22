@@ -32,7 +32,7 @@ export default function CodeWarsClient() {
 
                 <Col>
                     <Row className={"rowBorder"}>
-                        {/*<LangInfo/>*/}
+                        <LangInfo/>
                     </Row>
                     {/*<Row className={"rowBorder"}>*/}
                     {/*    <CircularProgressbar value={percentage} text={`${percentage}%`}*/}
