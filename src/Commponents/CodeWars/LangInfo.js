@@ -1,8 +1,7 @@
-import React, {useCallback, useContext, useState} from "react";
-import axios from "axios";
+import React from "react";
 
 import './CodeWars.css'
-import {UserName} from "./CodeWarsClient";
+
 import {Request} from "../../utils/utils";
 
 
@@ -53,19 +52,15 @@ const LangDetails = (lang_obj, lang_details) => {
 }
 
 export default function LangInfo() {
-    // const userName = useContext(UserName)
     const url_lang_list = "http://127.0.0.1:8000/code_wars/LanguageInfo/"
     const lang_list = Request(url_lang_list, false)
 
     const url_lang_details = "http://127.0.0.1:8000/code_wars/LanguageScores/"
-    console.log(url_lang_details)
     const lang_data = Request(url_lang_details, false)
-    console.log(lang_data)
 
     let langData = <tr/>
 
     if (lang_list['results'] && lang_data['results']) {
-        console.log(lang_list['results'])
         langData = lang_list['results'].map((lang) => (
             <tr>
                 {LangDetails(lang, lang_data['results'])}

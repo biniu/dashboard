@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 
 import {UserName} from "./CodeWarsClient";
 
-import {getTodayDate, getYesterdayDate, Request} from "../../utils/utils";
+import {Request} from "../../utils/utils";
 
 import './CodeWars.css'
 
@@ -33,8 +33,6 @@ export default function UserDetails() {
                 if (score.id === data.count - 1)
                     return true;
             })
-            console.log(last)
-            console.log(penultimate)
 
             return (
                 <table className={"codeWarsTable"}>
