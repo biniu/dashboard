@@ -1,5 +1,5 @@
 
-import './App.css';
+import './GlobalCSS/theme.css';
 
 import {Col, Container, Row} from "react-bootstrap";
 
@@ -23,7 +23,7 @@ function App() {
               </Row>
               <Row className={"container50h"}>
                   <Col sm={8} className={"colBorder"}>
-                      {/*<HabiticaClient/>*/}
+                      <HabiticaClient/>
                   </Col>
                   <Col className={"colBorder"}>
                       ToDo
