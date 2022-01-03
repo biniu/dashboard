@@ -1,6 +1,10 @@
-from fastapi import APIRouter, Depends
+from datetime import datetime, date
+
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
+
+from typing import Optional
 
 from database import engine, SessionLocal
 
@@ -11,7 +15,6 @@ router = APIRouter(
     tags=["CodeWars"],
     responses={404: {"description": "Not found"}}
 )
-
 
 CodeWarsModels.Base.metadata.create_all(bind=engine)
 
@@ -32,7 +35,8 @@ class CodeWarsUserStatistic(BaseModel):
     honor: int
     leaderboard_position: int
     kata_completed: int
-    user_id: int
+
+    last_update: Optional[date]
 
 
 class LanguageInfo(BaseModel):
@@ -54,27 +58,74 @@ async def read_users(db: Session = Depends(get_db)):
 
 @router.post("/users")
 async def create_user(user: CodeWarsUser, db: Session = Depends(get_db)):
+    if db.query(CodeWarsModels.CodeWarsUsers).filter(CodeWarsModels.CodeWarsUsers.name == user.name).first():
+        raise HTTPException(status_code=400, detail="User already exists")
+
     user_info_model = CodeWarsModels.CodeWarsUsers()
     user_info_model.name = user.name
 
     db.add(user_info_model)
     db.commit()
 
-    return successful_response(201)
+    created_user = db.query(CodeWarsModels.CodeWarsUsers).\
+        filter(CodeWarsModels.CodeWarsUsers.name == user.name)\
+        .first()
+
+    print(created_user)
+
+    return {
+        'status': 201,
+        'transaction': 'Successful',
+        'user_id': created_user.id
+    }
 
 
-@router.get("/UserStatistics")
-async def read_user_statistics(db: Session = Depends(get_db)):
-    return db.query(CodeWarsModels.CodeWarsUserStatistics).all()
+@router.get("/UserStatistics/{user_id}")
+async def read_user_statistics(user_id: int, db: Session = Depends(get_db)):
+    if not db.query(CodeWarsModels.CodeWarsUsers) \
+            .filter(CodeWarsModels.CodeWarsUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    user_statistics = db.query(CodeWarsModels.CodeWarsUserStatistics) \
+        .filter(CodeWarsModels.CodeWarsUserStatistics.user_id == user_id)
+    return user_statistics.all()
 
 
-@router.post("/UserStatistics")
-async def create_user_statistics(user_statistics: CodeWarsUserStatistic, db: Session = Depends(get_db)):
-    user_statistics_model = CodeWarsModels.CodeWarsUserStatistics()
+@router.post("/UserStatistics/{user_id}")
+async def create_user_statistics(user_id: int, user_statistics: CodeWarsUserStatistic, db: Session = Depends(get_db)):
+    print("create_user_statistics")
+
+    if not db.query(CodeWarsModels.CodeWarsUsers) \
+            .filter(CodeWarsModels.CodeWarsUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    if user_statistics.last_update:
+        print("data from parm")
+        statistic_date = user_statistics.last_update
+    else:
+        print("create new date")
+        statistic_date = datetime.today().strftime('%Y-%m-%d')
+
+    print("*"*80)
+    print(repr(statistic_date))
+    print("*" * 80)
+
+    last_update = db.query(CodeWarsModels.CodeWarsUserStatistics) \
+        .filter(CodeWarsModels.CodeWarsUserStatistics.last_update == statistic_date)
+
+    if last_update.first():
+        print(f"User statistic for {statistic_date} exist -> update exist one")
+        user_statistics_model = last_update.first()
+    else:
+        print(f"User statistic for {statistic_date} not exist -> create new one")
+        user_statistics_model = CodeWarsModels.CodeWarsUserStatistics()
     user_statistics_model.honor = user_statistics.honor
     user_statistics_model.leaderboard_position = user_statistics.leaderboard_position
     user_statistics_model.kata_completed = user_statistics.kata_completed
-    user_statistics_model.user_id = user_statistics.user_id
+    user_statistics_model.user_id = user_id
+
+    if user_statistics.last_update:
+        user_statistics_model.last_update = statistic_date
 
     db.add(user_statistics_model)
     db.commit()
