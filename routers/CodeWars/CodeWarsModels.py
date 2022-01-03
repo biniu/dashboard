@@ -1,5 +1,7 @@
-from sqlalchemy import ForeignKey, Column, Integer, String, DateTime, func
+from sqlalchemy import ForeignKey, Column, Integer, String, DateTime, func, DATE
 from sqlalchemy.orm import relationship
+
+from datetime import datetime
 
 # import from SQLAlchemy setup file 
 from database import Base
@@ -22,7 +24,7 @@ class CodeWarsUserStatistics(Base):
     honor = Column(Integer)
     leaderboard_position = Column(Integer)
     kata_completed = Column(Integer)
-    last_update = Column(DateTime, server_default=func.now())
+    last_update = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
 
     user_id = Column(Integer, ForeignKey(CodeWarsUsers.id))
     user = relationship("CodeWarsUsers")
@@ -47,7 +49,7 @@ class LanguageScores(Base):
     id = Column(Integer, primary_key=True, index=True)
     score = Column(Integer)
     rank = Column(Integer)
-    last_update = Column(DateTime, server_default=func.now())
+    last_update = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
 
     user_id = Column(Integer, ForeignKey(CodeWarsUsers.id))
     user = relationship("CodeWarsUsers")
