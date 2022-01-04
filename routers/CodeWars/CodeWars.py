@@ -140,13 +140,27 @@ async def read_language_infos(db: Session = Depends(get_db)):
 
 @router.post("/LanguageInfos")
 async def create_language_infos(language_info: LanguageInfo, db: Session = Depends(get_db)):
+    if db.query(CodeWarsModels.LanguageInfos).filter(CodeWarsModels.LanguageInfos.name == language_info.name).first():
+        raise HTTPException(status_code=400, detail=f"Language {language_info.name} already exists")
+
     language_info_model = CodeWarsModels.LanguageInfos()
     language_info_model.name = language_info.name
 
     db.add(language_info_model)
     db.commit()
 
-    return successful_response(201)
+    created_language = db.query(CodeWarsModels.LanguageInfos).\
+        filter(CodeWarsModels.LanguageInfos.name == language_info.name)\
+        .first()
+
+    print(created_language)
+
+    return {
+        'status': 201,
+        'transaction': 'Successful',
+        'user_id': created_language.id
+    }
+
 
 
 @router.get("/LanguageScores")
