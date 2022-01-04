@@ -153,7 +153,7 @@ async def create_language_infos(language_info: LanguageInfo, db: Session = Depen
     return {
         'status': 201,
         'transaction': 'Successful',
-        'user_id': created_language.id
+        'id': created_language.id
     }
 
 
@@ -201,6 +201,7 @@ async def create_language_scores(user_id: int, language_score: LanguageScore, db
 
     last_update = db.query(CodeWarsModels.LanguageScores) \
         .filter(CodeWarsModels.LanguageScores.last_update == statistic_date) \
+        .filter(CodeWarsModels.LanguageScores.lang_id == language_score.lang_id) \
         .filter(CodeWarsModels.LanguageScores.user_id == user_id)
 
     if last_update.first():
