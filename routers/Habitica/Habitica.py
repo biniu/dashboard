@@ -95,7 +95,6 @@ async def create_todo(user_id: int, todo: HabiticaTodo, db: Session = Depends(ge
     todo_model = HabiticaModels.HabiticaTodos()
     todo_model.habiticaID = todo.habiticaID
     todo_model.createdAt = todo.createdAt
-    # todo_model.completedAt = todo.completedAt
     todo_model.completed = todo.completed
     todo_model.priority = todo.priority
     todo_model.text = todo.text
