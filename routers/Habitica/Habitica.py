@@ -34,8 +34,8 @@ class HabiticaUser(BaseModel):
 class HabiticaTodo(BaseModel):
     habiticaID: str
 
-    createdAt: date
-    completedAt: date
+    createdAt: datetime
+    completedAt: Optional[datetime]
     completed: bool
 
     priority: int
