@@ -27,9 +27,6 @@ class HabiticaInterface:
         self._USER_ID = config.get('Habitica', 'USER_ID')
         self._TOKEN = config.get('Habitica', 'USER_KEY')
 
-        # self._date_request(url='http://localhost:3001/codeWarsUser')
-        # self._date_request(url=f'https://www.codewars.com/api/v1/users/{self._user_name}')
-
     def _date_request(self, url):
         with requests.Session() as session:
             session = requests.Session()
@@ -70,13 +67,11 @@ class HabiticaInterface:
 
         out = []
         todos = self._date_request(
-            url="http://localhost:3001/habiticaTodos"
-            # url="https://habitica.com/api/v3/tasks/user?type=todos"
+            # url="http://localhost:3001/habiticaTodos"
+            url="https://habitica.com/api/v3/tasks/user?type=todos"
         )
 
         for todo in todos['data']:
-            # print('*' * 80)
-            # pp(todo)
             todo_model = HabiticaTodo(
                 habiticaID=todo['id'],
                 createdAt=todo['createdAt'],
@@ -86,14 +81,36 @@ class HabiticaInterface:
                 text=todo['text']
             )
 
-            # pp(todo_model)
             out.append(todo_model)
 
         return out
+
+    def get_done_todos(self):
+
+        out = []
+        todos = self._date_request(
+            url="https://habitica.com/api/v3/tasks/user?type=completedTodos"
+        )
+
+        for todo in todos['data']:
+            todo_model = HabiticaTodo(
+                habiticaID=todo['id'],
+                createdAt=todo['createdAt'],
+                completedAt=todo['dateCompleted'],
+                completed=True,
+                priority=self._map_habitica_priority(todo['priority']),
+                text=todo['text']
+            )
+
+            out.append(todo_model)
+
+        return out
+
 
 
 if __name__ == "__main__":
     print("Main")
     habitica_client = HabiticaInterface()
 
-    print(habitica_client.get_todos())
+    pp(habitica_client.get_todos())
+    pp(habitica_client.get_done_todos())
