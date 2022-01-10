@@ -75,7 +75,7 @@ class HabiticaInterface:
         )
 
         for todo in todos['data']:
-            print('*' * 80)
+            # print('*' * 80)
             # pp(todo)
             todo_model = HabiticaTodo(
                 habiticaID=todo['id'],
@@ -86,8 +86,10 @@ class HabiticaInterface:
                 text=todo['text']
             )
 
-            pp(todo_model)
+            # pp(todo_model)
             out.append(todo_model)
+
+        return out
 
 
 if __name__ == "__main__":
