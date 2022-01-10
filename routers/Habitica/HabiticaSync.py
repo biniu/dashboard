@@ -49,6 +49,47 @@ def data_put(url: str, data: json):
         raise requests.HTTPError
 
 
+def sync_todos(habitica_todos: list, dashboard_todos: list, user_id: int) -> None:
+    for h_todo in habitica_todos:
+        todo_exist = False
+        for d_todo in dashboard_todos:
+            if d_todo['habiticaID'] == h_todo.habiticaID:
+                print("Todo already exist, check if need update")
+                todo_exist = True
+                if d_todo['priority'] == h_todo.priority \
+                        and d_todo['text'] == h_todo.text:
+                    print("Todo not change continue")
+                    continue
+                else:
+                    print("Task updated")
+                    data_put(
+                        url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}",
+                        data={
+                            "habiticaID": h_todo.habiticaID,
+                            "createdAt": h_todo.createdAt,
+                            "completedAt": h_todo.completedAt,
+                            "completed": h_todo.completed,
+                            "priority": h_todo.priority,
+                            "text": h_todo.text
+                        }
+                    )
+                    continue
+
+        if not todo_exist:
+            print("Creating todo")
+            data_post(
+                url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}",
+                data={
+                    "habiticaID": h_todo.habiticaID,
+                    "createdAt": h_todo.createdAt,
+                    "completedAt": h_todo.completedAt,
+                    "completed": h_todo.completed,
+                    "priority": h_todo.priority,
+                    "text": h_todo.text
+                }
+            )
+
+
 def sync() -> None:
     user_name = 'biniu'
 
@@ -69,45 +110,13 @@ def sync() -> None:
 
     dashboard_todos = data_get(url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}")
     habitica_todos = habitica_client.get_todos()
+    habitica_done_todos = habitica_client.get_done_todos()
 
-    # for d_todo in dashboard_todos:
+    print("Sync todos")
+    sync_todos(habitica_todos, dashboard_todos, user_id)
 
-    for h_todo in habitica_todos:
-        todo_exist = False
-        for d_todo in dashboard_todos:
-            if d_todo['habiticaID'] == h_todo.habiticaID:
-                print("Todo already exist, check if need update")
-                todo_exist = True
-                if d_todo['priority'] == h_todo.priority \
-                        and d_todo['text'] == h_todo.text:
-                    print("Todo not change continue")
-                    continue
-                else:ľ
-                    print("Task updated")
-                    data_put(
-                        url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}",
-                        data={
-                            "habiticaID": h_todo.habiticaID,
-                            "createdAt": h_todo.createdAt,
-                            "completed": h_todo.completed,
-                            "priority": h_todo.priority,
-                            "text": h_todo.text
-                        }
-                    )
-                    continue
-
-        if not todo_exist:
-            print("Creating todo")
-            data_post(
-                url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}",
-                data={
-                    "habiticaID": h_todo.habiticaID,
-                    "createdAt": h_todo.createdAt,
-                    "completed": h_todo.completed,
-                    "priority": h_todo.priority,
-                    "text": h_todo.text
-                }
-            )
+    print("Sync done todos")
+    sync_todos(habitica_done_todos, dashboard_todos, user_id)
 
 
 if __name__ == '__main__':
