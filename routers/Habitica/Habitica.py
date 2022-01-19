@@ -1,10 +1,12 @@
 from datetime import datetime, date
+from enum import Enum
+from pprint import pprint
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from pydantic import BaseModel
+from pydantic import BaseModel, Json, validator
 
-from typing import Optional
+from typing import Optional, List
 
 from database import engine, SessionLocal
 
@@ -33,13 +35,53 @@ class HabiticaUser(BaseModel):
 
 class HabiticaTodo(BaseModel):
     habiticaID: str
-
     createdAt: datetime
     completedAt: Optional[datetime]
     completed: bool
-
     priority: int
     text: str
+
+
+class Frequency(str, Enum):
+    daily = 'daily'
+    weekly = 'weekly'
+    monthly = 'monthly'
+
+
+class HabiticaHabitHistoryEntry(BaseModel):
+    date: date
+    scoredUp: int
+    scoredDown: int
+
+    class Config:
+        orm_mode = True
+
+
+class HabiticaHabit(BaseModel):
+    habiticaID: str
+    createdAt: datetime
+    up: bool
+    down: bool
+    counterUp: int
+    counterDown: int
+    frequency: Frequency
+    history: List[HabiticaHabitHistoryEntry] = []
+    priority: int
+    text: str
+
+    class Config:
+        orm_mode = True
+
+    # @validator('frequency')
+    # def frequency_must_be(cls, frequency):
+    #     if frequency not in ['daily', 'weekly', 'monthly']:
+    #         raise ValueError(f"Frequency must be one of 'daily', 'weekly' or 'monthly'")
+    #     return frequency
+    #
+    # @validator('history')
+    # def history_must_be(cls, history):
+
+
 
 
 @router.get("/users")
@@ -130,6 +172,67 @@ async def update_todo(user_id: int, todo: HabiticaTodo, db: Session = Depends(ge
     todo_model.user_id = user_id
 
     db.add(todo_model)
+    db.commit()
+
+    return {
+        'status': 201,
+        'transaction': 'Successful'
+    }
+
+
+@router.get("/Habits/{user_id}", response_model=List[HabiticaHabit])
+async def read_habits(user_id: int, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    habits = db.query(HabiticaModels.HabiticaHabits) \
+        .filter(HabiticaModels.HabiticaHabits.user_id == user_id)
+    return habits.all()
+
+
+@router.post("/Habits/{user_id}")
+async def create_habits(user_id: int, habit: HabiticaHabit, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    if db.query(HabiticaModels.HabiticaHabits) \
+            .filter(HabiticaModels.HabiticaHabits.habiticaID == habit.habiticaID).first():
+        raise HTTPException(status_code=400, detail=f"Todo with habiticaID {habit.habiticaID} already exist")
+
+
+    habit_model = HabiticaModels.HabiticaHabits()
+    habit_model.habiticaID = habit.habiticaID
+    habit_model.createdAt = habit.createdAt
+
+    habit_model.up = habit.up
+    habit_model.down = habit.down
+    habit_model.counterUp = habit.counterUp
+    habit_model.counterDown = habit.counterDown
+
+    habit_model.frequency = habit.frequency
+    # habit_model.history = habit.history
+
+    habit_model.priority = habit.priority
+    habit_model.text = habit.text
+    habit_model.user_id = user_id
+
+    # pprint(habit.history)
+
+    for elem in habit.history:
+        print(elem)
+        history_entry = HabiticaModels.HabiticaHabitHistory()
+        history_entry.date = elem.date
+        history_entry.scoredUp = elem.scoreUp
+        history_entry.scoredDown = elem.scoreDown
+
+        habit_model.history.append(history_entry)
+
+    print("habit_model.history")
+    print(habit_model.history)
+
+    db.add(habit_model)
     db.commit()
 
     return {

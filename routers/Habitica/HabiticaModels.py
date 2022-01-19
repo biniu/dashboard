@@ -1,4 +1,4 @@
-from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DATETIME
+from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DATETIME, JSON
 from sqlalchemy.orm import relationship
 
 from datetime import datetime
@@ -21,7 +21,6 @@ class HabiticaTodos(Base):
     id = Column(Integer, primary_key=True, index=True)
     habiticaID = Column(String)
 
-    # createdAt = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
     createdAt = Column(DATETIME)
     completedAt = Column(DATETIME, nullable=True)
     completed = Column(Boolean)
@@ -29,11 +28,51 @@ class HabiticaTodos(Base):
     priority = Column(Integer)
     text = Column(String)
 
-    # tags = models.TextField() # TODO
-    # reminders = # TODO
-
     user_id = Column(Integer, ForeignKey(HabiticaUsers.id))
     user = relationship("HabiticaUsers")
 
     def __str__(self):
         return f"Text {self.text} ID {self.id}"
+
+
+class HabiticaHabits(Base):
+    __tablename__ = "HabiticaHabits"
+
+    id = Column(Integer, primary_key=True, index=True)
+    habiticaID = Column(String)
+
+    createdAt = Column(DATETIME)
+
+    up = Column(Boolean)
+    down = Column(Boolean)
+    counterUp = Column(Integer)
+    counterDown = Column(Integer)
+
+    # TODO: change to enum after migrating to postgreSQL
+    # tmp defs:
+    # 1 -> daily
+    # 2 -> weekly
+    # 3 -> monthly
+    frequency = Column(String)
+
+    priority = Column(Integer)
+    text = Column(String)
+
+    user_id = Column(Integer, ForeignKey(HabiticaUsers.id))
+    user = relationship("HabiticaUsers")
+
+    # history_id = Column(Integer, ForeignKey(HabiticaHabitHistory.id))
+    history = relationship("HabiticaHabitHistory", back_populates="habit")
+
+
+class HabiticaHabitHistory(Base):
+    __tablename__ = "HabiticaHabitHistory"
+
+    id = Column(Integer, primary_key=True, index=True)
+    date = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
+
+    scoredUp = Column(Integer)
+    scoredDown = Column(Integer)
+
+    habit_id = Column(Integer, ForeignKey("HabiticaHabits.id"))
+    habit = relationship("HabiticaHabits", back_populates="history")
