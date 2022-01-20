@@ -61,7 +61,6 @@ class HabiticaHabits(Base):
     user_id = Column(Integer, ForeignKey(HabiticaUsers.id))
     user = relationship("HabiticaUsers")
 
-    # history_id = Column(Integer, ForeignKey(HabiticaHabitHistory.id))
     history = relationship("HabiticaHabitHistory", back_populates="habit")
 
 
@@ -76,3 +75,41 @@ class HabiticaHabitHistory(Base):
 
     habit_id = Column(Integer, ForeignKey("HabiticaHabits.id"))
     habit = relationship("HabiticaHabits", back_populates="history")
+
+
+class HabiticaDailies(Base):
+    __tablename__ = "HabiticaDailies"
+
+    id = Column(Integer, primary_key=True, index=True)
+    habiticaID = Column(String)
+
+    createdAt = Column(DATETIME)
+
+    # TODO: change to enum after migrating to postgreSQL
+    # tmp defs:
+    # 1 -> daily
+    # 2 -> weekly
+    # 3 -> monthly
+    # 4 -> Yearly
+    frequency = Column(String)
+    everyX = Column(Integer)
+
+    priority = Column(Integer)
+    text = Column(String)
+
+    completed = Column(Boolean)
+
+    user_id = Column(Integer, ForeignKey(HabiticaUsers.id))
+    user = relationship("HabiticaUsers")
+
+    history = relationship("HabiticaDailiesHistory", back_populates="daily")
+
+
+class HabiticaDailiesHistory(Base):
+    __tablename__ = "HabiticaDailiesHistory"
+
+    id = Column(Integer, primary_key=True, index=True)
+    date = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
+
+    daily_id = Column(Integer, ForeignKey("HabiticaDailies.id"))
+    daily = relationship("HabiticaDailies", back_populates="history")
