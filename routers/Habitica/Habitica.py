@@ -72,17 +72,6 @@ class HabiticaHabit(BaseModel):
     class Config:
         orm_mode = True
 
-    # @validator('frequency')
-    # def frequency_must_be(cls, frequency):
-    #     if frequency not in ['daily', 'weekly', 'monthly']:
-    #         raise ValueError(f"Frequency must be one of 'daily', 'weekly' or 'monthly'")
-    #     return frequency
-    #
-    # @validator('history')
-    # def history_must_be(cls, history):
-
-
-
 
 @router.get("/users")
 async def read_users(db: Session = Depends(get_db)):
@@ -200,7 +189,6 @@ async def create_habits(user_id: int, habit: HabiticaHabit, db: Session = Depend
     if db.query(HabiticaModels.HabiticaHabits) \
             .filter(HabiticaModels.HabiticaHabits.habiticaID == habit.habiticaID).first():
         raise HTTPException(status_code=400, detail=f"Todo with habiticaID {habit.habiticaID} already exist")
-
 
     habit_model = HabiticaModels.HabiticaHabits()
     habit_model.habiticaID = habit.habiticaID
