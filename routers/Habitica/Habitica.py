@@ -46,6 +46,7 @@ class Frequency(str, Enum):
     daily = 'daily'
     weekly = 'weekly'
     monthly = 'monthly'
+    yearly = 'yearly'
 
 
 class HabiticaHabitHistoryEntry(BaseModel):
@@ -68,6 +69,29 @@ class HabiticaHabit(BaseModel):
     history: List[HabiticaHabitHistoryEntry] = []
     priority: int
     text: str
+
+    class Config:
+        orm_mode = True
+
+
+class HabiticaDailyHistoryEntry(BaseModel):
+    date: date
+    due: bool
+    completed: bool
+
+    class Config:
+        orm_mode = True
+
+
+class HabiticaDaily(BaseModel):
+    habiticaID: str
+    createdAt: datetime
+    frequency: Frequency
+    everyX: int
+    priority: int
+    text: str
+    completed: bool
+    history: List[HabiticaDailyHistoryEntry] = []
 
     class Config:
         orm_mode = True
@@ -221,6 +245,60 @@ async def create_habits(user_id: int, habit: HabiticaHabit, db: Session = Depend
     print(habit_model.history)
 
     db.add(habit_model)
+    db.commit()
+
+    return {
+        'status': 201,
+        'transaction': 'Successful'
+    }
+
+
+@router.get("/Dailies/{user_id}", response_model=List[HabiticaDaily])
+async def read_dailies(user_id: int, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    dailies = db.query(HabiticaModels.HabiticaDailies) \
+        .filter(HabiticaModels.HabiticaDailies.user_id == user_id)
+    return dailies.all()
+
+@router.post("/Dailies/{user_id}")
+async def create_dailies(user_id: int, daily: HabiticaDaily, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    if db.query(HabiticaModels.HabiticaDailies) \
+            .filter(HabiticaModels.HabiticaDailies.habiticaID == daily.habiticaID).first():
+        raise HTTPException(status_code=400, detail=f"Todo with habiticaID {daily  .habiticaID} already exist")
+
+    daily_model = HabiticaModels.HabiticaDailies()
+    daily_model.habiticaID = daily.habiticaID
+    daily_model.createdAt = daily.createdAt
+
+    daily_model.frequency = daily.frequency
+    daily_model.everyX = daily.everyX
+    daily_model.priority = daily.priority
+    daily_model.text = daily.text
+
+    daily_model.completed = daily.completed
+    daily_model.user_id = user_id
+    # pprint(habit.history)
+
+    for elem in daily.history:
+        print(elem)
+        daily_entry = HabiticaModels.HabiticaDailiesHistory()
+        daily_entry.date = elem.date
+        daily_entry.due = elem.completed
+        daily_entry.completed = elem.completed
+
+        daily_model.history.append(daily_entry)
+
+    print("habit_model.history")
+    print(daily_model.history)
+
+    db.add(daily_model)
     db.commit()
 
     return {

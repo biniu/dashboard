@@ -90,7 +90,7 @@ class HabiticaDailies(Base):
     # 1 -> daily
     # 2 -> weekly
     # 3 -> monthly
-    # 4 -> Yearly
+    # 4 -> yearly
     frequency = Column(String)
     everyX = Column(Integer)
 
@@ -110,6 +110,8 @@ class HabiticaDailiesHistory(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     date = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
+    due = Column(Boolean)
+    completed = Column(Boolean)
 
     daily_id = Column(Integer, ForeignKey("HabiticaDailies.id"))
     daily = relationship("HabiticaDailies", back_populates="history")
