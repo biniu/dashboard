@@ -43,6 +43,31 @@ class HabiticaDaily:
     history: List[HabiticaDailyHistoryEntry]
 
 
+@dataclass_json
+@dataclass
+class HabiticaHabitHistoryEntry:
+    date: date
+    scoredUp: int
+    scoredDown: int
+
+
+@dataclass_json
+@dataclass
+class HabiticaHabit:
+    habiticaID: str
+    createdAt: datetime
+
+    up: bool
+    down: bool
+    counterUp: int
+    counterDown: int
+    frequency: str
+    priority: int
+    text: str
+
+    history: List[HabiticaHabitHistoryEntry]
+
+
 class HabiticaInterface:
 
     def __init__(self) -> None:
@@ -161,6 +186,38 @@ class HabiticaInterface:
             out.append(daily_model)
         return out
 
+    def get_habits(self):
+        out = []
+        habits = self._date_request(
+            url="http://localhost:3001/habiticaHabits"
+            # url="https://habitica.com/api/v3/tasks/user?type=habits"
+        )
+        for habit in habits['data']:
+            habit_history = []
+            for elem in habit['history']:
+                history_model = HabiticaHabitHistoryEntry(
+                    date=elem['date'],
+                    scoredUp=elem['scoredUp'],
+                    scoredDown=elem['scoredDown']
+                )
+                habit_history.append(history_model)
+
+            habit_model = HabiticaHabit(
+                habiticaID=habit['id'],
+                createdAt=habit['createdAt'],
+                frequency=habit['frequency'],
+                priority=self._map_habitica_priority(habit['priority']),
+                text=habit['text'],
+                up=habit['up'],
+                down=habit['down'],
+                counterUp=habit['counterUp'],
+                counterDown=habit['counterDown'],
+                history=habit_history
+            )
+
+            out.append(habit_model)
+        return out
+
 
 if __name__ == "__main__":
     print("Main")
@@ -169,4 +226,4 @@ if __name__ == "__main__":
     # pp(habitica_client.get_todos())
     # pp(habitica_client.get_done_todos())
 
-    habitica_client.get_dailies()
+    habitica_client.get_habits()
