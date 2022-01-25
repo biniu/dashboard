@@ -1,3 +1,4 @@
+from pprint import pprint
 
 import requests
 import json
@@ -15,7 +16,7 @@ def data_get(url: str):
         print("Request failed!")
         print(response.status_code)
         print(response.reason)
-        print(response.json())
+        pprint(response.json())
         raise requests.HTTPError
 
 
@@ -30,7 +31,7 @@ def data_post(url: str, data: json):
         print("Request failed!")
         print(response.status_code)
         print(response.reason)
-        print(response.json())
+        pprint(response.json())
         raise requests.HTTPError
 
 
@@ -45,7 +46,7 @@ def data_put(url: str, data: json):
         print("Request failed!")
         print(response.status_code)
         print(response.reason)
-        print(response.json())
+        pprint(response.json())
         raise requests.HTTPError
 
 
@@ -57,7 +58,8 @@ def sync_todos(habitica_todos: list, dashboard_todos: list, user_id: int) -> Non
                 print("Todo already exist, check if need update")
                 todo_exist = True
                 if d_todo['priority'] == h_todo.priority \
-                        and d_todo['text'] == h_todo.text:
+                        and d_todo['text'] == h_todo.text \
+                        and d_todo['completed'] == h_todo.completed:
                     print("Todo not change continue")
                     continue
                 else:
@@ -90,6 +92,37 @@ def sync_todos(habitica_todos: list, dashboard_todos: list, user_id: int) -> Non
             )
 
 
+def sync_dailies(habitica_dailies: list, dashboard_dailies: list, user_id: int) -> None:
+    for h_daily in habitica_dailies:
+        daily_exist = False
+        for d_daily in dashboard_dailies:
+            if d_daily['habiticaID'] == h_daily.habiticaID:
+                print("Daily already exist, check if need update")
+                daily_exist = True
+                if d_daily['frequency'] == h_daily.frequency \
+                        and d_daily['everyX'] == h_daily.everyX \
+                        and d_daily['priority'] == h_daily.priority \
+                        and d_daily['text'] == h_daily.text \
+                        and d_daily['completed'] == h_daily.completed \
+                        and d_daily['history'] == h_daily.history:
+                    print("Daily not change continue")
+                    continue
+                else:
+                    print("Daily updated")
+                    data_put(
+                        url=f"http://127.0.0.1:8000/Habitica/Dailies/{user_id}",
+                        data=json.loads(h_daily.to_json())
+                    )
+                    continue
+
+        if not daily_exist:
+            print("Creating daily")
+            data_post(
+                url=f"http://127.0.0.1:8000/Habitica/Dailies/{user_id}",
+                data=json.loads(h_daily.to_json())
+            )
+
+
 def sync() -> None:
     user_name = 'biniu'
 
@@ -109,14 +142,19 @@ def sync() -> None:
     print(f"user_id {user_id}")
 
     dashboard_todos = data_get(url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}")
+    dashboard_dailies = data_get(url=f"http://127.0.0.1:8000/Habitica/Dailies/{user_id}")
     habitica_todos = habitica_client.get_todos()
     habitica_done_todos = habitica_client.get_done_todos()
+    habitica_dailies = habitica_client.get_dailies()
 
     print("Sync todos")
     sync_todos(habitica_todos, dashboard_todos, user_id)
 
     print("Sync done todos")
     sync_todos(habitica_done_todos, dashboard_todos, user_id)
+
+    print("Sync dailies")
+    sync_dailies(habitica_dailies, dashboard_dailies, user_id)
 
 
 if __name__ == '__main__':
