@@ -1,0 +1,2469 @@
+{
+  "codeWarsUser": {
+    "username": "biniu",
+    "name": "None",
+    "honor": 755,
+    "clan": "None",
+    "leaderboardPosition": 28460,
+    "skills": [],
+    "ranks": {
+      "overall": {
+        "rank": -5,
+        "name": "5 kyu",
+        "color": "yellow",
+        "score": 623
+      },
+      "languages": {
+        "python": {
+          "rank": -6,
+          "name": "6 kyu",
+          "color": "yellow",
+          "score": 215
+        },
+        "cpp": {
+          "rank": -5,
+          "name": "5 kyu",
+          "color": "yellow",
+          "score": 375
+        },
+        "c": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 3
+        },
+        "shell": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 6
+        },
+        "typescript": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 2
+        },
+        "sql": {
+          "rank": -8,
+          "name": "8 kyu",
+          "color": "white",
+          "score": 8
+        },
+        "javascript": {
+          "rank": -7,
+          "name": "7 kyu",
+          "color": "white",
+          "score": 65
+        }
+      }
+    },
+    "codeChallenges": {
+      "totalAuthored": 0,
+      "totalCompleted": 172
+    }
+  },
+  "codeWarsCode-challenges": {
+    "totalPages": 1,
+    "totalItems": 172,
+    "data": [
+      {
+        "id": "59cfc000aeb2844d16000075",
+        "name": "Alternate capitalization",
+        "slug": "alternate-capitalization",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2021-05-19T05:28:10.232Z"
+      },
+      {
+        "id": "5b180e9fedaa564a7000009a",
+        "name": "Fix string case",
+        "slug": "fix-string-case",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2021-05-18T05:57:02.281Z"
+      },
+      {
+        "id": "53368a47e38700bd8300030d",
+        "name": "Format a string of names like 'Bart, Lisa & Maggie'.",
+        "slug": "format-a-string-of-names-like-bart-lisa-and-maggie",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-26T11:27:58.890Z"
+      },
+      {
+        "id": "559590633066759614000063",
+        "name": "The highest profit wins!",
+        "slug": "the-highest-profit-wins",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-13T06:38:51.066Z"
+      },
+      {
+        "id": "54ba84be607a92aa900000f1",
+        "name": "Isograms",
+        "slug": "isograms",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-13T06:33:50.428Z"
+      },
+      {
+        "id": "514a024011ea4fb54200004b",
+        "name": "Extract the domain name from a URL",
+        "slug": "extract-the-domain-name-from-a-url-1",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-13T06:24:56.885Z"
+      },
+      {
+        "id": "54c27a33fb7da0db0100040e",
+        "name": "You're a square!",
+        "slug": "youre-a-square",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-08T13:29:10.879Z"
+      },
+      {
+        "id": "5a29a0898f27f2d9c9000058",
+        "name": "Simple string characters",
+        "slug": "simple-string-characters",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-07T11:54:20.804Z"
+      },
+      {
+        "id": "59f11118a5e129e591000134",
+        "name": "Sum of array singles",
+        "slug": "sum-of-array-singles",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-06T05:50:33.744Z"
+      },
+      {
+        "id": "57ef016a7b45ef647a00002d",
+        "name": "Homogenous arrays",
+        "slug": "homogenous-arrays",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-10-05T06:01:36.260Z"
+      },
+      {
+        "id": "5b4e474305f04bea11000148",
+        "name": "Every possible sum of two digits",
+        "slug": "every-possible-sum-of-two-digits",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2020-10-02T13:27:44.919Z"
+      },
+      {
+        "id": "58b8c94b7df3f116eb00005b",
+        "name": "Simple Fun #176: Reverse Letter",
+        "slug": "simple-fun-number-176-reverse-letter",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-30T15:29:16.538Z"
+      },
+      {
+        "id": "5390bac347d09b7da40006f6",
+        "name": "Jaden Casing Strings",
+        "slug": "jaden-casing-strings",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2020-09-29T17:26:23.419Z"
+      },
+      {
+        "id": "5865cff66b5699883f0001aa",
+        "name": "All Star Code Challenge #22",
+        "slug": "all-star-code-challenge-number-22",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-09-28T06:01:05.350Z"
+      },
+      {
+        "id": "54554846126a002d5b000854",
+        "name": "A Gift Well Spent",
+        "slug": "a-gift-well-spent",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-09-28T05:49:27.102Z"
+      },
+      {
+        "id": "58a66c208b88b2de660000c3",
+        "name": "Simple Fun #136: Missing Values",
+        "slug": "simple-fun-number-136-missing-values",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-09-28T05:40:00.769Z"
+      },
+      {
+        "id": "564d0490e96393fc5c000029",
+        "name": "Calculator: Coin Combination",
+        "slug": "calculator-coin-combination",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-09-25T13:15:05.311Z"
+      },
+      {
+        "id": "568dc69683322417eb00002c",
+        "name": "L2: Triple X",
+        "slug": "l2-triple-x",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-09-24T11:49:20.966Z"
+      },
+      {
+        "id": "583af10620dda4da270000c5",
+        "name": "Merge two arrays",
+        "slug": "merge-two-arrays",
+        "completedLanguages": [
+          "javascript"
+        ],
+        "completedAt": "2020-09-23T10:08:03.809Z"
+      },
+      {
+        "id": "5650ab06d11d675371000003",
+        "name": "Split In Parts",
+        "slug": "split-in-parts",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2020-09-21T08:56:02.692Z"
+      },
+      {
+        "id": "52fba66badcd10859f00097e",
+        "name": "Disemvowel Trolls",
+        "slug": "disemvowel-trolls",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2020-09-18T07:21:52.421Z"
+      },
+      {
+        "id": "546e2562b03326a88e000020",
+        "name": "Square Every Digit",
+        "slug": "square-every-digit",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2020-09-18T07:10:05.057Z"
+      },
+      {
+        "id": "598d91785d4ce3ec4f000018",
+        "name": "Word values",
+        "slug": "word-values",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-17T06:01:34.260Z"
+      },
+      {
+        "id": "597d75744f4190857a00008d",
+        "name": "Letterbox Paint-Squad",
+        "slug": "letterbox-paint-squad",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2020-09-16T06:33:00.120Z"
+      },
+      {
+        "id": "568018a64f35f0c613000054",
+        "name": "Finish Guess the Number Game",
+        "slug": "finish-guess-the-number-game",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-15T06:08:12.576Z"
+      },
+      {
+        "id": "55c28f7304e3eaebef0000da",
+        "name": "Unfinished Loop -  Bug Fixing #1",
+        "slug": "unfinished-loop-bug-fixing-number-1",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-15T05:50:30.332Z"
+      },
+      {
+        "id": "57f037927b45ef77b3000260",
+        "name": "Return location",
+        "slug": "return-location",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-15T05:49:30.729Z"
+      },
+      {
+        "id": "56530b444e831334c0000020",
+        "name": "Determine offspring sex based on genes XX and XY chromosomes",
+        "slug": "determine-offspring-sex-based-on-genes-xx-and-xy-chromosomes",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-15T05:43:38.494Z"
+      },
+      {
+        "id": "523b66342d0c301ae400003b",
+        "name": "Function 3 - multiplying two numbers",
+        "slug": "function-3-multiplying-two-numbers",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-15T05:39:37.907Z"
+      },
+      {
+        "id": "55c0a79e20be94c91400014b",
+        "name": "Playing with cubes I",
+        "slug": "playing-with-cubes-i",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-14T07:01:02.953Z"
+      },
+      {
+        "id": "5a023c426975981341000014",
+        "name": "Third Angle of a Triangle",
+        "slug": "third-angle-of-a-triangle",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-14T06:49:18.405Z"
+      },
+      {
+        "id": "563a631f7cbbc236cf0000c2",
+        "name": "Grasshopper - Terminal game move function",
+        "slug": "grasshopper-terminal-game-move-function",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-14T06:47:24.964Z"
+      },
+      {
+        "id": "56f699cd9400f5b7d8000b55",
+        "name": "My head is at the wrong end!",
+        "slug": "my-head-is-at-the-wrong-end",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-14T06:45:02.538Z"
+      },
+      {
+        "id": "55f73be6e12baaa5900000d4",
+        "name": "Grasshopper - Messi goals function",
+        "slug": "grasshopper-messi-goals-function",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-10T04:41:49.374Z"
+      },
+      {
+        "id": "54147087d5c2ebe4f1000805",
+        "name": "The 'if' function",
+        "slug": "the-if-function",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-10T04:40:46.292Z"
+      },
+      {
+        "id": "56f6919a6b88de18ff000b36",
+        "name": "101 Dalmatians - squash the bugs, not the dogs!",
+        "slug": "101-dalmatians-squash-the-bugs-not-the-dogs",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-10T04:38:58.148Z"
+      },
+      {
+        "id": "5951d30ce99cf2467e000013",
+        "name": "Pythagorean Triple",
+        "slug": "pythagorean-triple",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-08T06:58:39.001Z"
+      },
+      {
+        "id": "551b4501ac0447318f0009cd",
+        "name": "Convert a Boolean to a String",
+        "slug": "convert-a-boolean-to-a-string",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-08T06:47:00.342Z"
+      },
+      {
+        "id": "56cd44e1aa4ac7879200010b",
+        "name": "Is the string uppercase?",
+        "slug": "is-the-string-uppercase",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-08T06:37:59.238Z"
+      },
+      {
+        "id": "55192f4ecd82ff826900089e",
+        "name": "Watermelon",
+        "slug": "watermelon",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-07T14:10:16.361Z"
+      },
+      {
+        "id": "5bb0c58f484fcd170700063d",
+        "name": "Pillars",
+        "slug": "pillars",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-07T06:29:53.472Z"
+      },
+      {
+        "id": "5933a1f8552bc2750a0000ed",
+        "name": "Get Nth Even Number",
+        "slug": "get-nth-even-number",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-07T06:16:40.213Z"
+      },
+      {
+        "id": "56fa3c5ce4d45d2a52001b3c",
+        "name": "Exclusive \"or\" (xor) Logical Operator",
+        "slug": "exclusive-or-xor-logical-operator",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-04T05:56:19.381Z"
+      },
+      {
+        "id": "59811fd8a070625d4c000013",
+        "name": "Find the Integral",
+        "slug": "find-the-integral",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-04T05:53:52.489Z"
+      },
+      {
+        "id": "568dcc3c7f12767a62000038",
+        "name": "L1: Set Alarm",
+        "slug": "l1-set-alarm",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-04T05:47:09.423Z"
+      },
+      {
+        "id": "59342039eb450e39970000a6",
+        "name": "Count Odd Numbers below n",
+        "slug": "count-odd-numbers-below-n",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-04T05:44:25.712Z"
+      },
+      {
+        "id": "5861d28f124b35723e00005e",
+        "name": "Will you make it?",
+        "slug": "will-you-make-it",
+        "completedLanguages": [
+          "cpp",
+          "python"
+        ],
+        "completedAt": "2020-09-03T06:32:58.474Z"
+      },
+      {
+        "id": "57a77726bb9944d000000b06",
+        "name": "Price of Mangoes",
+        "slug": "price-of-mangoes",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-03T06:20:22.610Z"
+      },
+      {
+        "id": "5b853229cfde412a470000d0",
+        "name": "Twice as old",
+        "slug": "twice-as-old",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-03T06:03:22.236Z"
+      },
+      {
+        "id": "5b73fe9fb3d9776fbf00009e",
+        "name": "Sum of differences in array",
+        "slug": "sum-of-differences-in-array",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-02T06:01:51.669Z"
+      },
+      {
+        "id": "57a4d500e298a7952100035d",
+        "name": "Hex to Decimal",
+        "slug": "hex-to-decimal",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-02T05:32:57.233Z"
+      },
+      {
+        "id": "57a429e253ba3381850000fb",
+        "name": "Calculate BMI",
+        "slug": "calculate-bmi",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-01T07:37:48.851Z"
+      },
+      {
+        "id": "555a67db74814aa4ee0001b5",
+        "name": "Is it even?",
+        "slug": "is-it-even",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-01T07:32:59.063Z"
+      },
+      {
+        "id": "55cbc3586671f6aa070000fb",
+        "name": "Grasshopper - Check for factor",
+        "slug": "grasshopper-check-for-factor",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-01T07:17:33.934Z"
+      },
+      {
+        "id": "57a0885cbb9944e24c00008e",
+        "name": "Remove exclamation marks",
+        "slug": "remove-exclamation-marks",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-09-01T07:15:49.642Z"
+      },
+      {
+        "id": "586c1cf4b98de0399300001d",
+        "name": "Grasshopper - Terminal game combat function",
+        "slug": "grasshopper-terminal-game-combat-function-1",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-31T07:12:31.690Z"
+      },
+      {
+        "id": "55cbd4ba903825f7970000f5",
+        "name": "Grasshopper - Grade book",
+        "slug": "grasshopper-grade-book",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-28T06:01:28.361Z"
+      },
+      {
+        "id": "59ca8246d751df55cc00014c",
+        "name": "Is he gonna survive?",
+        "slug": "is-he-gonna-survive",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-28T05:46:27.531Z"
+      },
+      {
+        "id": "56efc695740d30f963000557",
+        "name": "altERnaTIng cAsE <=> ALTerNAtiNG CaSe",
+        "slug": "alternating-case-<-equals->-alternating-case",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-28T05:41:35.248Z"
+      },
+      {
+        "id": "5a6663e9fd56cb5ab800008b",
+        "name": "Cat years, Dog years",
+        "slug": "cat-years-dog-years",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-27T06:12:11.639Z"
+      },
+      {
+        "id": "5865918c6b569962950002a1",
+        "name": "All Star Code Challenge #18",
+        "slug": "all-star-code-challenge-number-18",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-27T06:02:05.755Z"
+      },
+      {
+        "id": "583710ccaa6717322c000105",
+        "name": "Simple multiplication",
+        "slug": "simple-multiplication",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-27T05:56:46.345Z"
+      },
+      {
+        "id": "5601409514fc93442500010b",
+        "name": "How good are you really?",
+        "slug": "how-good-are-you-really",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-27T05:54:31.923Z"
+      },
+      {
+        "id": "5a2be17aee1aaefe2a000151",
+        "name": "Array plus array",
+        "slug": "array-plus-array",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-27T05:50:11.733Z"
+      },
+      {
+        "id": "57a0556c7cb1f31ab3000ad7",
+        "name": "MakeUpperCase",
+        "slug": "makeuppercase",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-26T06:19:14.377Z"
+      },
+      {
+        "id": "55f9bca8ecaa9eac7100004a",
+        "name": "Beginner Series #2 Clock",
+        "slug": "beginner-series-number-2-clock",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-26T06:16:30.731Z"
+      },
+      {
+        "id": "53dc54212259ed3d4f00071c",
+        "name": "Sum Arrays",
+        "slug": "sum-arrays",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-26T06:13:24.251Z"
+      },
+      {
+        "id": "56f6ad906b88de513f000d96",
+        "name": "Do I get a bonus?",
+        "slug": "do-i-get-a-bonus",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-26T06:09:23.080Z"
+      },
+      {
+        "id": "53ee5429ba190077850011d4",
+        "name": "You Can't Code Under Pressure #1",
+        "slug": "you-cant-code-under-pressure-number-1",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-26T06:05:12.232Z"
+      },
+      {
+        "id": "56f69d9f9400f508fb000ba7",
+        "name": "Count the Monkeys!",
+        "slug": "count-the-monkeys",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-26T06:03:36.586Z"
+      },
+      {
+        "id": "5ae62fcf252e66d44d00008e",
+        "name": "Expressions Matter ",
+        "slug": "expressions-matter",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-24T06:22:47.217Z"
+      },
+      {
+        "id": "515e188a311df01cba000003",
+        "name": "Get Planet Name By ID",
+        "slug": "get-planet-name-by-id",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-24T06:11:16.039Z"
+      },
+      {
+        "id": "523b4ff7adca849afe000035",
+        "name": "Function 1 - hello world",
+        "slug": "function-1-hello-world",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-24T06:02:26.933Z"
+      },
+      {
+        "id": "5556282156230d0e5e000089",
+        "name": "DNA to RNA Conversion",
+        "slug": "dna-to-rna-conversion",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-11T09:18:53.349Z"
+      },
+      {
+        "id": "5a00e05cc374cb34d100000d",
+        "name": "Reversed sequence ",
+        "slug": "reversed-sequence",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-11T09:00:40.660Z"
+      },
+      {
+        "id": "55225023e1be1ec8bc000390",
+        "name": "Jenny's secret message",
+        "slug": "jennys-secret-message",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-11T08:52:44.302Z"
+      },
+      {
+        "id": "544675c6f971f7399a000e79",
+        "name": "Convert a String to a Number!",
+        "slug": "convert-a-string-to-a-number",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-11T08:48:06.100Z"
+      },
+      {
+        "id": "5899dc03bc95b1bf1b0000ad",
+        "name": "Invert values",
+        "slug": "invert-values",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-11T08:46:15.957Z"
+      },
+      {
+        "id": "55fab1ffda3e2e44f00000c6",
+        "name": "Beginner Series #4 Cockroach",
+        "slug": "beginner-series-number-4-cockroach",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-09T08:55:38.063Z"
+      },
+      {
+        "id": "55a70521798b14d4750000a4",
+        "name": "Returning Strings",
+        "slug": "returning-strings",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-09T08:51:36.054Z"
+      },
+      {
+        "id": "5ab6538b379d20ad880000ab",
+        "name": "Area or Perimeter",
+        "slug": "area-or-perimeter",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-04T11:22:05.589Z"
+      },
+      {
+        "id": "577a6e90d48e51c55e000217",
+        "name": "Collatz Conjecture (3n+1)",
+        "slug": "collatz-conjecture-3n-plus-1",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-08-04T06:07:19.561Z"
+      },
+      {
+        "id": "57a1fd2ce298a731b20006a4",
+        "name": "Is it a palindrome?",
+        "slug": "is-it-a-palindrome",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-30T11:58:44.162Z"
+      },
+      {
+        "id": "5a2b703dc5e2845c0900005a",
+        "name": "Can we divide it?",
+        "slug": "can-we-divide-it",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-30T11:41:15.721Z"
+      },
+      {
+        "id": "57cfdf34902f6ba3d300001e",
+        "name": "Sort and Star",
+        "slug": "sort-and-star",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-29T11:20:04.454Z"
+      },
+      {
+        "id": "5aa736a455f906981800360d",
+        "name": "The Feast of Many Beasts",
+        "slug": "the-feast-of-many-beasts",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-29T11:09:24.917Z"
+      },
+      {
+        "id": "563e320cee5dddcf77000158",
+        "name": "Get the mean of an array",
+        "slug": "get-the-mean-of-an-array",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-29T10:41:58.168Z"
+      },
+      {
+        "id": "5b077ebdaf15be5c7f000077",
+        "name": "If you can't sleep, just count sheep!!",
+        "slug": "if-you-cant-sleep-just-count-sheep",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-29T10:37:43.827Z"
+      },
+      {
+        "id": "57f780909f7e8e3183000078",
+        "name": "Beginner - Reduce but Grow",
+        "slug": "beginner-reduce-but-grow",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-29T08:55:52.976Z"
+      },
+      {
+        "id": "5583090cbe83f4fd8c000051",
+        "name": "Convert number to reversed array of digits",
+        "slug": "convert-number-to-reversed-array-of-digits",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-28T05:14:15.937Z"
+      },
+      {
+        "id": "58cb43f4256836ed95000f97",
+        "name": "Difference of Volumes of Cuboids",
+        "slug": "difference-of-volumes-of-cuboids",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-27T07:03:50.819Z"
+      },
+      {
+        "id": "57eadb7ecd143f4c9c0000a3",
+        "name": "Abbreviate a Two Word Name",
+        "slug": "abbreviate-a-two-word-name",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-24T14:07:50.415Z"
+      },
+      {
+        "id": "5bb904724c47249b10000131",
+        "name": "Total amount of points",
+        "slug": "total-amount-of-points",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-24T13:52:05.674Z"
+      },
+      {
+        "id": "57fb09ef2b5314a8a90001ed",
+        "name": "Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence",
+        "slug": "exclamation-marks-series-number-11-replace-all-vowel-to-exclamation-mark-in-the-sentence",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-24T13:40:17.446Z"
+      },
+      {
+        "id": "577bd026df78c19bca0002c0",
+        "name": "Correct the mistakes of the character recognition software",
+        "slug": "correct-the-mistakes-of-the-character-recognition-software",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-24T13:31:53.796Z"
+      },
+      {
+        "id": "5672a98bdbdd995fad00000f",
+        "name": "Rock Paper Scissors!",
+        "slug": "rock-paper-scissors",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-24T08:57:31.725Z"
+      },
+      {
+        "id": "56fcfad9c7e1fa2472000034",
+        "name": "Evil or Odious",
+        "slug": "evil-or-odious",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-24T06:49:05.535Z"
+      },
+      {
+        "id": "5513795bd3fafb56c200049e",
+        "name": "Count by X",
+        "slug": "count-by-x",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-23T05:47:19.538Z"
+      },
+      {
+        "id": "57a2013acf1fa5bfc4000921",
+        "name": "Calculate average ",
+        "slug": "calculate-average",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T12:52:34.249Z"
+      },
+      {
+        "id": "577a98a6ae28071780000989",
+        "name": "Find Maximum and Minimum Values of a List",
+        "slug": "find-maximum-and-minimum-values-of-a-list",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T11:28:55.743Z"
+      },
+      {
+        "id": "576b93db1129fcf2200001e6",
+        "name": "Sum without highest and lowest number",
+        "slug": "sum-without-highest-and-lowest-number",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T11:16:31.800Z"
+      },
+      {
+        "id": "515e271a311df0350d00000f",
+        "name": "Square(n) Sum",
+        "slug": "square-n-sum",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T10:09:39.118Z"
+      },
+      {
+        "id": "57eae65a4321032ce000002d",
+        "name": "Fake Binary",
+        "slug": "fake-binary",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T07:46:29.303Z"
+      },
+      {
+        "id": "57356c55867b9b7a60000bd7",
+        "name": "Basic Mathematical Operations",
+        "slug": "basic-mathematical-operations",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T07:25:51.577Z"
+      },
+      {
+        "id": "5545f109004975ea66000086",
+        "name": "Is n divisible by x and y?",
+        "slug": "is-n-divisible-by-x-and-y",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T07:19:46.206Z"
+      },
+      {
+        "id": "5265326f5fda8eb1160004c8",
+        "name": "Convert a Number to a String!",
+        "slug": "convert-a-number-to-a-string",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T06:44:25.059Z"
+      },
+      {
+        "id": "5168bb5dfe9a00b126000018",
+        "name": "Reversed Strings",
+        "slug": "reversed-strings",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T06:39:23.868Z"
+      },
+      {
+        "id": "54edbc7200b811e956000556",
+        "name": "Counting sheep...",
+        "slug": "counting-sheep-dot-dot-dot",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-22T06:30:36.326Z"
+      },
+      {
+        "id": "53369039d7ab3ac506000467",
+        "name": "Convert boolean values to strings 'Yes' or 'No'.",
+        "slug": "convert-boolean-values-to-strings-yes-or-no",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-21T07:54:41.428Z"
+      },
+      {
+        "id": "55d24f55d7dd296eb9000030",
+        "name": "Grasshopper - Summation",
+        "slug": "grasshopper-summation",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-21T07:09:51.560Z"
+      },
+      {
+        "id": "55a2d7ebe362935a210000b2",
+        "name": "Find the smallest integer in the array",
+        "slug": "find-the-smallest-integer-in-the-array",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-21T06:58:35.293Z"
+      },
+      {
+        "id": "57eae20f5500ad98e50002c5",
+        "name": "Remove String Spaces",
+        "slug": "remove-string-spaces",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-20T13:00:49.879Z"
+      },
+      {
+        "id": "55685cd7ad70877c23000102",
+        "name": "Return Negative",
+        "slug": "return-negative",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-20T12:54:40.184Z"
+      },
+      {
+        "id": "56bc28ad5bdaeb48760009b0",
+        "name": "Remove First and Last Character",
+        "slug": "remove-first-and-last-character",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-20T12:52:35.417Z"
+      },
+      {
+        "id": "5715eaedb436cf5606000381",
+        "name": "Sum of positive",
+        "slug": "sum-of-positive",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-07-20T05:08:02.592Z"
+      },
+      {
+        "id": "57e92e91b63b6cbac20001e5",
+        "name": "Holiday VIII - Duty Free",
+        "slug": "holiday-viii-duty-free",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-06-19T07:31:54.552Z"
+      },
+      {
+        "id": "5526fc09a1bbd946250002dc",
+        "name": "Find The Parity Outlier",
+        "slug": "find-the-parity-outlier",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-18T09:55:01.286Z"
+      },
+      {
+        "id": "565c4e1303a0a006d7000127",
+        "name": "Number Format",
+        "slug": "number-format",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-17T07:15:52.423Z"
+      },
+      {
+        "id": "554ca54ffa7d91b236000023",
+        "name": "Delete occurrences of an element if it occurs more than n times",
+        "slug": "delete-occurrences-of-an-element-if-it-occurs-more-than-n-times",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-14T15:28:35.488Z"
+      },
+      {
+        "id": "52c31f8e6605bcc646000082",
+        "name": "Two Sum",
+        "slug": "two-sum",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-14T10:47:11.604Z"
+      },
+      {
+        "id": "556e0fccc392c527f20000c5",
+        "name": "Fibonacci, Tribonacci and friends",
+        "slug": "fibonacci-tribonacci-and-friends",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-10T08:23:23.391Z"
+      },
+      {
+        "id": "513e08acc600c94f01000001",
+        "name": "RGB To Hex Conversion",
+        "slug": "rgb-to-hex-conversion",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-05T10:49:24.665Z"
+      },
+      {
+        "id": "54da5a58ea159efa38000836",
+        "name": "Find the odd int",
+        "slug": "find-the-odd-int",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-02-04T10:35:19.584Z"
+      },
+      {
+        "id": "54dc6f5a224c26032800005c",
+        "name": "Help the bookseller !",
+        "slug": "help-the-bookseller",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-01-29T12:02:57.993Z"
+      },
+      {
+        "id": "555eded1ad94b00403000071",
+        "name": "Sum of the first nth term of Series",
+        "slug": "sum-of-the-first-nth-term-of-series",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-01-27T11:36:02.407Z"
+      },
+      {
+        "id": "563b662a59afc2b5120000c6",
+        "name": "Growth of a Population",
+        "slug": "growth-of-a-population",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-01-27T10:45:27.511Z"
+      },
+      {
+        "id": "56269eb78ad2e4ced1000013",
+        "name": "Find the next perfect square!",
+        "slug": "find-the-next-perfect-square",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-01-24T13:56:57.381Z"
+      },
+      {
+        "id": "54bf1c2cd5b56cc47f0007a1",
+        "name": "Counting Duplicates",
+        "slug": "counting-duplicates",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2020-01-23T07:03:36.376Z"
+      },
+      {
+        "id": "5a3fe3dde1ce0e8ed6000097",
+        "name": "Century From Year",
+        "slug": "century-from-year",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-09-30T17:38:50.984Z"
+      },
+      {
+        "id": "50ee6b0bdeab583673000025",
+        "name": "Basic variable assignment",
+        "slug": "basic-variable-assignment",
+        "completedLanguages": [
+          "cpp",
+          "python"
+        ],
+        "completedAt": "2019-04-07T19:28:27.826Z"
+      },
+      {
+        "id": "55edaba99da3a9c84000003b",
+        "name": "Find numbers which are divisible by given number",
+        "slug": "find-numbers-which-are-divisible-by-given-number",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-03-29T08:58:21.687Z"
+      },
+      {
+        "id": "590ba881fe13cfdcc20001b4",
+        "name": "On the Canadian Border (SQL for Beginners #2)",
+        "slug": "on-the-canadian-border-sql-for-beginners-number-2",
+        "completedLanguages": [
+          "sql"
+        ],
+        "completedAt": "2019-03-22T15:58:00.321Z"
+      },
+      {
+        "id": "590ba881fe13cfdcc20001b4",
+        "name": "On the Canadian Border (SQL for Beginners #2)",
+        "slug": "on-the-canadian-border-sql-for-beginners-number-2",
+        "completedLanguages": [
+          "sql"
+        ],
+        "completedAt": "2019-03-22T15:55:51.377Z"
+      },
+      {
+        "id": "5809b9ef88b750ab180001ec",
+        "name": "1. Find all active students",
+        "slug": "1-find-all-active-students",
+        "completedLanguages": [
+          "sql"
+        ],
+        "completedAt": "2019-03-13T10:23:13.408Z"
+      },
+      {
+        "id": "590a95eede09f87472000213",
+        "name": "Adults only  (SQL for Beginners #1)",
+        "slug": "adults-only-sql-for-beginners-number-1",
+        "completedLanguages": [
+          "sql"
+        ],
+        "completedAt": "2019-03-12T13:18:40.156Z"
+      },
+      {
+        "id": "588417e576933b0ec9000045",
+        "name": "Simple Fun #1: Seats in Theater",
+        "slug": "simple-fun-number-1-seats-in-theater",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-03-05T17:17:21.299Z"
+      },
+      {
+        "id": "55ad04714f0b468e8200001c",
+        "name": "get character from ASCII Value",
+        "slug": "get-character-from-ascii-value",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-03-04T11:47:51.594Z"
+      },
+      {
+        "id": "56dec885c54a926dcd001095",
+        "name": "Opposite number",
+        "slug": "opposite-number",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-02-21T12:56:21.505Z"
+      },
+      {
+        "id": "5c5086287bc6600001c7589a",
+        "name": "Is It Negative Zero (-0)?",
+        "slug": "is-it-negative-zero-0",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2019-02-19T21:56:47.349Z"
+      },
+      {
+        "id": "5656b6906de340bd1b0000ac",
+        "name": "Two to One",
+        "slug": "two-to-one",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2019-02-14T14:25:09.833Z"
+      },
+      {
+        "id": "534d0a229345375d520006a0",
+        "name": "Power of two",
+        "slug": "power-of-two",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2019-02-13T17:04:46.725Z"
+      },
+      {
+        "id": "57a6633153ba33189e000074",
+        "name": "Ordered Count of Characters",
+        "slug": "ordered-count-of-characters",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2019-02-12T12:31:58.492Z"
+      },
+      {
+        "id": "56459c0df289d97bd7000083",
+        "name": "From-To-Step Sequence Generator",
+        "slug": "from-to-step-sequence-generator",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2019-02-08T12:35:49.392Z"
+      },
+      {
+        "id": "55908aad6620c066bc00002a",
+        "name": "Exes and Ohs",
+        "slug": "exes-and-ohs",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2019-02-07T16:03:04.184Z"
+      },
+      {
+        "id": "554e4a2f232cdd87d9000038",
+        "name": "Complementary DNA",
+        "slug": "complementary-dna",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2019-02-07T14:21:28.936Z"
+      },
+      {
+        "id": "554b4ac871d6813a03000035",
+        "name": "Highest and Lowest",
+        "slug": "highest-and-lowest",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2019-02-05T12:49:59.306Z"
+      },
+      {
+        "id": "54ff3102c1bad923760001f3",
+        "name": "Vowel Count",
+        "slug": "vowel-count",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-02-04T15:18:22.195Z"
+      },
+      {
+        "id": "5a431c0de1ce0ec33a00000c",
+        "name": "Even numbers in an array",
+        "slug": "even-numbers-in-an-array",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2019-02-04T13:32:20.111Z"
+      },
+      {
+        "id": "56747fd5cb988479af000028",
+        "name": "Get the Middle Character",
+        "slug": "get-the-middle-character",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2018-03-21T20:36:52.010Z"
+      },
+      {
+        "id": "57eb8fcdf670e99d9b000272",
+        "name": "Highest Scoring Word",
+        "slug": "highest-scoring-word",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2018-03-20T19:44:37.519Z"
+      },
+      {
+        "id": "5667e8f4e3f572a8f2000039",
+        "name": "Mumbling",
+        "slug": "mumbling",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2017-04-25T19:44:28.055Z"
+      },
+      {
+        "id": "5806445c3f1f9c2f72000031",
+        "name": "Mean vs. Median",
+        "slug": "mean-vs-median",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2017-04-23T19:13:55.419Z"
+      },
+      {
+        "id": "55736129f78b30311300010f",
+        "name": "Complete The Pattern #4",
+        "slug": "complete-the-pattern-number-4",
+        "completedLanguages": [
+          "cpp",
+          "python"
+        ],
+        "completedAt": "2017-02-27T04:36:41.330Z"
+      },
+      {
+        "id": "5738f5ea9545204cec000155",
+        "name": "Help Bob count letters and digits.",
+        "slug": "help-bob-count-letters-and-digits",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2017-02-21T18:20:18.332Z"
+      },
+      {
+        "id": "515decfd9dcfc23bb6000006",
+        "name": "IP Validation",
+        "slug": "ip-validation",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-20T04:25:20.478Z"
+      },
+      {
+        "id": "5269452810342858ec000951",
+        "name": "Coordinates Validator",
+        "slug": "coordinates-validator",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-14T20:57:06.222Z"
+      },
+      {
+        "id": "52bc74d4ac05d0945d00054e",
+        "name": "First non-repeating character",
+        "slug": "first-non-repeating-character",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-14T20:03:04.592Z"
+      },
+      {
+        "id": "582a4f4ab94351397d000006",
+        "name": "Return a list of files filtered by file extension",
+        "slug": "return-a-list-of-files-filtered-by-file-extension",
+        "completedLanguages": [
+          "shell"
+        ],
+        "completedAt": "2017-02-12T07:24:50.553Z"
+      },
+      {
+        "id": "556deca17c58da83c00002db",
+        "name": "Tribonacci Sequence",
+        "slug": "tribonacci-sequence",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2017-02-11T13:06:31.414Z"
+      },
+      {
+        "id": "54e6533c92449cc251001667",
+        "name": "Unique In Order",
+        "slug": "unique-in-order",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2017-02-10T15:45:56.632Z"
+      },
+      {
+        "id": "51675d17e0c1bed195000001",
+        "name": "Largest 5 digit number in a series",
+        "slug": "largest-5-digit-number-in-a-series",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-09T20:17:08.553Z"
+      },
+      {
+        "id": "559ce00b70041bc7b600013d",
+        "name": "Financing Plan on Planet XY140Z-n",
+        "slug": "financing-plan-on-planet-xy140z-n",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-09T20:07:15.617Z"
+      },
+      {
+        "id": "514b92a657cdc65150000006",
+        "name": "Multiples of 3 or 5",
+        "slug": "multiples-of-3-or-5",
+        "completedLanguages": [
+          "cpp"
+        ],
+        "completedAt": "2017-02-06T04:06:53.778Z"
+      },
+      {
+        "id": "582d7d22081ed3342d0000a7",
+        "name": "Bash Basics - Check for File Existence ",
+        "slug": "bash-basics-check-for-file-existence",
+        "completedLanguages": [
+          "shell"
+        ],
+        "completedAt": "2017-02-06T03:58:30.621Z"
+      },
+      {
+        "id": "5626b561280a42ecc50000d1",
+        "name": "Take a Number And Sum  Its Digits Raised To The Consecutive Powers And ....¡Eureka!!",
+        "slug": "take-a-number-and-sum-its-digits-raised-to-the-consecutive-powers-and-dot-dot-dot-eureka",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-05T17:36:01.976Z"
+      },
+      {
+        "id": "580878d5d27b84b64c000b51",
+        "name": "Sum of Triangular Numbers",
+        "slug": "sum-of-triangular-numbers",
+        "completedLanguages": [
+          "python",
+          "cpp",
+          "c"
+        ],
+        "completedAt": "2017-02-05T16:44:42.908Z"
+      },
+      {
+        "id": "57f609022f4d534f05000024",
+        "name": "Find the stray number",
+        "slug": "find-the-stray-number",
+        "completedLanguages": [
+          "cpp",
+          "python"
+        ],
+        "completedAt": "2017-02-03T04:05:11.365Z"
+      },
+      {
+        "id": "58261acb22be6e2ed800003a",
+        "name": "Volume of a Cuboid",
+        "slug": "volume-of-a-cuboid",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2017-02-03T03:37:47.552Z"
+      },
+      {
+        "id": "576bb71bbbcf0951d5000044",
+        "name": "Count of positives / sum of negatives",
+        "slug": "count-of-positives-slash-sum-of-negatives",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2017-02-02T04:41:45.951Z"
+      },
+      {
+        "id": "53da3dbb4a5168369a0000fe",
+        "name": "Even or Odd",
+        "slug": "even-or-odd",
+        "completedLanguages": [
+          "python",
+          "cpp"
+        ],
+        "completedAt": "2017-02-01T20:03:39.624Z"
+      },
+      {
+        "id": "57a55c8b72292d057b000594",
+        "name": "Reversing Words in a String",
+        "slug": "reversing-words-in-a-string",
+        "completedLanguages": [
+          "python"
+        ],
+        "completedAt": "2017-02-01T04:32:36.883Z"
+      },
+      {
+        "id": "50654ddff44f800200000004",
+        "name": "Multiply",
+        "slug": "multiply",
+        "completedLanguages": [
+          "python",
+          "cpp",
+          "typescript"
+        ],
+        "completedAt": "2017-01-29T07:10:01.268Z"
+      }
+    ]
+  },
+
+  "habiticaTodos": {
+    "success": true,
+    "data": [
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "completed": false,
+        "collapseChecklist": false,
+        "type": "todo",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "checklist": [
+          {
+            "completed": false,
+            "text": "sub 1",
+            "id": "b2d2ec0e-adee-4514-b48e-cf0d19ea4448"
+          },
+          {
+            "completed": false,
+            "text": "sub2",
+            "id": "6d98af8b-c3aa-4db8-bcc7-a0e69560915e"
+          }
+        ],
+        "reminders": [],
+        "createdAt": "2021-04-03T16:35:24.815Z",
+        "updatedAt": "2021-04-03T16:35:35.939Z",
+        "_id": "6ef6de17-b123-422d-a442-e49b7d6e3eee",
+        "text": "test sub task",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "6ef6de17-b123-422d-a442-e49b7d6e3eee"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "completed": false,
+        "collapseChecklist": false,
+        "type": "todo",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "checklist": [],
+        "reminders": [],
+        "createdAt": "2021-04-03T16:35:05.113Z",
+        "updatedAt": "2021-04-03T16:35:18.127Z",
+        "_id": "f7959d10-a2e3-46ff-8244-be262f71acec",
+        "text": "test due",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "date": "2021-04-10T16:35:00.000Z",
+        "id": "f7959d10-a2e3-46ff-8244-be262f71acec"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "completed": false,
+        "collapseChecklist": false,
+        "type": "todo",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "checklist": [],
+        "reminders": [],
+        "createdAt": "2021-04-03T16:34:50.958Z",
+        "updatedAt": "2021-04-03T16:34:50.958Z",
+        "_id": "38e4310f-7483-48ec-a82b-2a0a86b17e85",
+        "text": "test",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "38e4310f-7483-48ec-a82b-2a0a86b17e85"
+      }
+    ],
+    "notifications": [],
+    "appVersion": "4.188.3"
+  },
+  "habiticaHabits": {
+    "success": true,
+    "data": [
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": true,
+        "counterUp": 4,
+        "counterDown": 2,
+        "frequency": "daily",
+        "history": [
+          {
+            "date": 1617462021462,
+            "value": 1.9747007695148526,
+            "scoredUp": 4,
+            "scoredDown": 2
+          }
+        ],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 1.9747007695148526,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T15:00:15.400Z",
+        "updatedAt": "2021-04-03T15:00:21.472Z",
+        "_id": "09383e3d-17e2-4935-b7b7-6e8ea49fb4aa",
+        "text": "history test ",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "09383e3d-17e2-4935-b7b7-6e8ea49fb4aa"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": true,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "daily",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [
+          "307e8b69-99ff-42f7-8f96-c5940cfeeb40"
+        ],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:59:29.285Z",
+        "updatedAt": "2021-04-03T15:00:06.988Z",
+        "_id": "8d468ecc-7a61-4f1f-817f-533fc0d822e9",
+        "text": "habit with tag ",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "8d468ecc-7a61-4f1f-817f-533fc0d822e9"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": true,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "monthly",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:57:55.981Z",
+        "updatedAt": "2021-04-03T14:58:09.809Z",
+        "_id": "d737952c-91d3-4251-83d9-e9424954a1a1",
+        "text": "test monthly",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "d737952c-91d3-4251-83d9-e9424954a1a1"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": true,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "weekly",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:57:51.190Z",
+        "updatedAt": "2021-04-03T14:58:17.612Z",
+        "_id": "463c22b0-146c-4cbb-a355-c521ded82681",
+        "text": "test weekly",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "463c22b0-146c-4cbb-a355-c521ded82681"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": true,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "daily",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:57:46.131Z",
+        "updatedAt": "2021-04-03T14:58:23.957Z",
+        "_id": "f2ffff76-c266-48a7-9573-b8234b16e92d",
+        "text": "test daily",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "f2ffff76-c266-48a7-9573-b8234b16e92d"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": true,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "daily",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:54:49.228Z",
+        "updatedAt": "2021-04-03T14:54:49.228Z",
+        "_id": "e10002be-1c71-40a2-ac24-9e9d66f58308",
+        "text": "test both",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "e10002be-1c71-40a2-ac24-9e9d66f58308"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": true,
+        "down": false,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "daily",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:54:43.452Z",
+        "updatedAt": "2021-04-03T14:55:09.757Z",
+        "_id": "9cb24cf3-4cd8-49dc-9e22-7c4799def8b0",
+        "text": "test only positive ",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "9cb24cf3-4cd8-49dc-9e22-7c4799def8b0"
+      },
+      {
+        "challenge": {},
+        "group": {
+          "approval": {
+            "required": false,
+            "approved": false,
+            "requested": false
+          },
+          "assignedUsers": [],
+          "sharedCompletion": "singleCompletion"
+        },
+        "up": false,
+        "down": true,
+        "counterUp": 0,
+        "counterDown": 0,
+        "frequency": "daily",
+        "history": [],
+        "type": "habit",
+        "notes": "",
+        "tags": [],
+        "value": 0,
+        "priority": 1,
+        "attribute": "str",
+        "byHabitica": false,
+        "reminders": [],
+        "createdAt": "2021-04-03T14:54:36.784Z",
+        "updatedAt": "2021-04-03T14:55:15.673Z",
+        "_id": "5c254c47-7449-4bab-81eb-92be8d825d81",
+        "text": "test only negative",
+        "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+        "id": "5c254c47-7449-4bab-81eb-92be8d825d81"
+      }
+    ],
+    "notifications": [],
+    "appVersion": "4.188.3"
+  },
+  "habiticaDailies": {
+  "success": true,
+  "data": [
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": true,
+        "su": true
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "yearly",
+      "everyX": 1,
+      "streak": 0,
+      "nextDue": [
+        "2022-04-02T22:00:00.000Z",
+        "2023-04-02T22:00:00.000Z",
+        "2024-04-02T22:00:00.000Z",
+        "2025-04-02T22:00:00.000Z",
+        "2026-04-02T22:00:00.000Z",
+        "2027-04-02T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:30:17.554Z",
+      "updatedAt": "2021-04-03T16:32:40.802Z",
+      "_id": "4e1b0d7c-cca6-463c-ab97-6e6b861327f7",
+      "text": "test yearly ",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "4e1b0d7c-cca6-463c-ab97-6e6b861327f7"
+    },
+    {
+      "repeat": {
+        "m": false,
+        "t": false,
+        "w": false,
+        "th": false,
+        "f": false,
+        "s": true,
+        "su": false
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "monthly",
+      "everyX": 1,
+      "streak": 0,
+      "nextDue": [
+        "2021-05-02T22:00:00.000Z",
+        "2021-06-02T22:00:00.000Z",
+        "2021-07-02T22:00:00.000Z",
+        "2021-08-02T22:00:00.000Z",
+        "2021-09-02T22:00:00.000Z",
+        "2021-10-02T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [
+        3
+      ],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:30:06.283Z",
+      "updatedAt": "2021-04-03T16:32:47.401Z",
+      "_id": "0d69f90a-1f5f-4dc4-b73c-4d6dc1360b35",
+      "text": "test monthly ",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "0d69f90a-1f5f-4dc4-b73c-4d6dc1360b35"
+    },
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": false,
+        "su": false
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "weekly",
+      "everyX": 1,
+      "streak": 0,
+      "nextDue": [
+        "2021-04-04T22:00:00.000Z",
+        "2021-04-05T22:00:00.000Z",
+        "2021-04-06T22:00:00.000Z",
+        "2021-04-07T22:00:00.000Z",
+        "2021-04-08T22:00:00.000Z",
+        "2021-04-11T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:31:41.500Z",
+      "updatedAt": "2021-04-03T16:32:02.438Z",
+      "_id": "8928479c-b166-4c57-b52d-c86d8833648e",
+      "text": "test weekly  some days",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": false,
+      "id": "8928479c-b166-4c57-b52d-c86d8833648e"
+    },
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": true,
+        "su": true
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "weekly",
+      "everyX": 1,
+      "streak": 0,
+      "nextDue": [
+        "2021-04-04T22:00:00.000Z",
+        "2021-04-05T22:00:00.000Z",
+        "2021-04-06T22:00:00.000Z",
+        "2021-04-07T22:00:00.000Z",
+        "2021-04-08T22:00:00.000Z",
+        "2021-04-09T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:29:52.241Z",
+      "updatedAt": "2021-04-03T16:31:36.720Z",
+      "_id": "2da12218-bd6f-4dc2-92f2-feb06e69c8b8",
+      "text": "test weekly ",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "2da12218-bd6f-4dc2-92f2-feb06e69c8b8"
+    },
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": true,
+        "su": true
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "daily",
+      "everyX": 1,
+      "streak": 0,
+      "nextDue": [
+        "2021-04-03T22:00:00.000Z",
+        "2021-04-04T22:00:00.000Z",
+        "2021-04-05T22:00:00.000Z",
+        "2021-04-06T22:00:00.000Z",
+        "2021-04-07T22:00:00.000Z",
+        "2021-04-08T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:29:45.847Z",
+      "updatedAt": "2021-04-03T16:31:27.415Z",
+      "_id": "64c5f301-accb-4c49-abba-3e017918976b",
+      "text": "test daily ",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "64c5f301-accb-4c49-abba-3e017918976b"
+    },
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": true,
+        "su": true
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "daily",
+      "everyX": 2,
+      "streak": 0,
+      "nextDue": [
+        "2021-04-04T22:00:00.000Z",
+        "2021-04-06T22:00:00.000Z",
+        "2021-04-08T22:00:00.000Z",
+        "2021-04-10T22:00:00.000Z",
+        "2021-04-12T22:00:00.000Z",
+        "2021-04-14T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:30:59.887Z",
+      "updatedAt": "2021-04-03T16:31:10.962Z",
+      "_id": "88f91a7b-51c4-41b1-a504-ba676607d2ad",
+      "text": "test every 2 day",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "88f91a7b-51c4-41b1-a504-ba676607d2ad"
+    },
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": true,
+        "su": true
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "weekly",
+      "everyX": 1,
+      "streak": 1,
+      "nextDue": [
+        "2021-04-04T22:00:00.000Z",
+        "2021-04-05T22:00:00.000Z",
+        "2021-04-06T22:00:00.000Z",
+        "2021-04-07T22:00:00.000Z",
+        "2021-04-08T22:00:00.000Z",
+        "2021-04-09T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [
+        {
+          "date": 1617467590487,
+          "value": 1
+        }
+      ],
+      "completed": true,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 1,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:29:22.681Z",
+      "updatedAt": "2021-04-03T16:33:10.498Z",
+      "_id": "1ffd0883-d519-4b5b-8701-781bd77db900",
+      "text": "test done",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "1ffd0883-d519-4b5b-8701-781bd77db900"
+    },
+    {
+      "repeat": {
+        "m": true,
+        "t": true,
+        "w": true,
+        "th": true,
+        "f": true,
+        "s": true,
+        "su": true
+      },
+      "challenge": {},
+      "group": {
+        "approval": {
+          "required": false,
+          "approved": false,
+          "requested": false
+        },
+        "assignedUsers": [],
+        "sharedCompletion": "singleCompletion"
+      },
+      "frequency": "weekly",
+      "everyX": 1,
+      "streak": 0,
+      "nextDue": [
+        "2021-04-04T22:00:00.000Z",
+        "2021-04-05T22:00:00.000Z",
+        "2021-04-06T22:00:00.000Z",
+        "2021-04-07T22:00:00.000Z",
+        "2021-04-08T22:00:00.000Z",
+        "2021-04-09T22:00:00.000Z"
+      ],
+      "yesterDaily": true,
+      "history": [],
+      "completed": false,
+      "collapseChecklist": false,
+      "type": "daily",
+      "notes": "",
+      "tags": [],
+      "value": 0,
+      "priority": 1,
+      "attribute": "str",
+      "byHabitica": false,
+      "startDate": "2021-04-02T22:00:00.000Z",
+      "daysOfMonth": [],
+      "weeksOfMonth": [],
+      "checklist": [],
+      "reminders": [],
+      "createdAt": "2021-04-03T16:29:12.680Z",
+      "updatedAt": "2021-04-03T16:29:12.680Z",
+      "_id": "a9ba3e97-eec8-4a57-8c85-e7bb5dbc5ac2",
+      "text": "test not done",
+      "userId": "64573dd5-cf03-4648-b231-23c06f586329",
+      "isDue": true,
+      "id": "a9ba3e97-eec8-4a57-8c85-e7bb5dbc5ac2"
+    }
+  ],
+  "notifications": [],
+  "appVersion": "4.188.3"
+}
+}

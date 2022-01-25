@@ -1,0 +1,63 @@
+
+.rowBorder {
+    border: 1px solid orange;
+}
+
+.codeWars {
+    text-align: left;
+    padding: 0px;
+    height: 100%;
+
+    font-size: 15px;
+}
+
+.cwTD {
+    padding-right: 5px;
+}
+
+
+.codeWarsTable {
+    text-align: left;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    /*padding: 20px;*/
+}
+
+
+.streaksTable {
+    border: 3px solid black;
+    width: 100%;
+}
+
+.streaksTh {
+    width: 100%;
+}
+
+.streaksTr {
+    border: 2px solid red;
+}
+
+.streaksTd {
+    border: 1px solid blue;
+    width: 14%;
+}
+
+
+progress {
+    border-radius: 7px;
+    width: 50%;
+    margin-left: -11.5%;
+}
+progress::-webkit-progress-bar {
+    background-color: #282c34;
+    border-radius: 3px;
+}
+progress::-webkit-progress-value {
+    background-color: blue;
+    border-radius: 3px;
+}
+
+
+
+
+
