@@ -5,7 +5,11 @@ import requests
 
 from pprint import pprint as pp
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime
+
+from typing import List
+from dataclasses_json import dataclass_json
+
 
 
 @dataclass
@@ -16,6 +20,27 @@ class HabiticaTodo:
     completed: bool
     priority: int
     text: str
+
+
+@dataclass_json
+@dataclass
+class HabiticaDailyHistoryEntry:
+    date: date
+    due: bool
+    completed: bool
+
+
+@dataclass_json
+@dataclass
+class HabiticaDaily:
+    habiticaID: str
+    createdAt: datetime
+    frequency: str
+    everyX: int
+    priority: int
+    text: str
+    completed: bool
+    history: List[HabiticaDailyHistoryEntry]
 
 
 class HabiticaInterface:
@@ -44,10 +69,10 @@ class HabiticaInterface:
         if response.status_code == 200:
             return response.json()
         else:
-            # self.logger.error("Request failed!")
-            # self.logger.error(response.status_code)
-            # self.logger.error(response.reason)
-            # self.logger.error(response.json())
+            print("Request failed!")
+            print(response.status_code)
+            print(response.reason)
+            print(response.json())
             raise requests.HTTPError
 
     @staticmethod
@@ -106,11 +131,42 @@ class HabiticaInterface:
 
         return out
 
+    def get_dailies(self):
+        out = []
+        dailies = self._date_request(
+            # url="http://localhost:3001/habiticaDailies"
+            url="https://habitica.com/api/v3/tasks/user?type=dailys"
+        )
+
+        for daily in dailies['data']:
+            daily_history = []
+            for elem in daily['history']:
+                history_model = HabiticaDailyHistoryEntry(
+                    date=elem['date'],
+                    due=elem['isDue'],
+                    completed=elem['completed']
+                )
+                daily_history.append(history_model)
+            daily_model = HabiticaDaily(
+                habiticaID=daily['id'],
+                createdAt=daily['createdAt'],
+                frequency=daily['frequency'],
+                everyX=daily['everyX'],
+                priority=self._map_habitica_priority(daily['priority']),
+                text=daily['text'],
+                completed=daily['completed'],
+                history=daily_history
+            )
+
+            out.append(daily_model)
+        return out
 
 
 if __name__ == "__main__":
     print("Main")
     habitica_client = HabiticaInterface()
 
-    pp(habitica_client.get_todos())
-    pp(habitica_client.get_done_todos())
+    # pp(habitica_client.get_todos())
+    # pp(habitica_client.get_done_todos())
+
+    habitica_client.get_dailies()
