@@ -1,8 +1,8 @@
-from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DATETIME, JSON
+from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DATETIME
 from sqlalchemy.orm import relationship
 
 from datetime import datetime
-from database import Base
+from src.database import Base
 
 
 class HabiticaUsers(Base):

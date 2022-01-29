@@ -1,16 +1,15 @@
 from datetime import datetime, date
 from enum import Enum
-from pprint import pprint
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from pydantic import BaseModel, Json, validator
+from pydantic import BaseModel
 
 from typing import Optional, List
 
-from database import engine, SessionLocal
+from src.database import engine, SessionLocal
 
-from routers.Habitica import HabiticaModels
+from src.routers.Habitica import HabiticaModels
 
 router = APIRouter(
     prefix="/Habitica",
