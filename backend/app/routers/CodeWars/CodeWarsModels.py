@@ -2,7 +2,7 @@ from sqlalchemy import ForeignKey, Column, Integer, String, DATE
 from sqlalchemy.orm import relationship
 
 from datetime import datetime
-from src.database import Base
+from app.database import Base
 
 
 class CodeWarsUsers(Base):

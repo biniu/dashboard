@@ -6,9 +6,9 @@ from pydantic import BaseModel
 
 from typing import Optional
 
-from src.database import engine, SessionLocal
+from app.database import engine, SessionLocal
 
-from src.routers.CodeWars import CodeWarsModels
+from app.routers.CodeWars import CodeWarsModels
 
 router = APIRouter(
     prefix="/CodeWars",

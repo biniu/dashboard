@@ -7,9 +7,9 @@ from pydantic import BaseModel
 
 from typing import Optional, List
 
-from src.database import engine, SessionLocal
+from app.database import engine, SessionLocal
 
-from src.routers.Habitica import HabiticaModels
+from app.routers.Habitica import HabiticaModels
 
 router = APIRouter(
     prefix="/Habitica",

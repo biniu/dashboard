@@ -189,8 +189,8 @@ class HabiticaInterface:
     def get_habits(self):
         out = []
         habits = self._date_request(
-            url="http://localhost:3001/habiticaHabits"
-            # url="https://habitica.com/api/v3/tasks/user?type=habits"
+            # url="http://localhost:3001/habiticaHabits"
+            url="https://habitica.com/api/v3/tasks/user?type=habits"
         )
         for habit in habits['data']:
             habit_history = []

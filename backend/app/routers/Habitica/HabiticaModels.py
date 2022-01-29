@@ -2,7 +2,7 @@ from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DATET
 from sqlalchemy.orm import relationship
 
 from datetime import datetime
-from src.database import Base
+from app.database import Base
 
 
 class HabiticaUsers(Base):
