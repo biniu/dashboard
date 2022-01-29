@@ -1,7 +1,10 @@
 import React from "react";
 
-import Todos from "./Todos"
 import {Col, Row} from "react-bootstrap";
+
+import Todos from "./Todos"
+import Habits from "./Habits";
+import Dailies from "./Dailies";
 
 export default function UserDetails() {
 
@@ -16,9 +19,11 @@ export default function UserDetails() {
             </Col>
             <Col>
                 <Row>
-                    Habits
+                    {/*<Habits/>*/}
                 </Row>
-                <Row>Dailies</Row>
+                <Row>
+                    <Dailies/>
+                </Row>
             </Col>
             </Row>
         </Row>

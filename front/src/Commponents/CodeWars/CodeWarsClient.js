@@ -9,9 +9,10 @@ import {CircularProgressbar} from "react-circular-progressbar";
 import LangInfo from "./LangInfo";
 
 export const UserName = createContext("biniu");
+export const UserID = createContext(1);
 
 export default function CodeWarsClient() {
-    const percentage = 66;
+    // const percentage = 66;
 
     return (
         <Container fluid className={"codeWars"}>
@@ -22,7 +23,9 @@ export default function CodeWarsClient() {
                 <Col>
                     <Row className={"rowBorder"}>
                         <UserName.Provider value={"biniu"}>
-                            <UserDetails/>
+                            <UserID.Provider value={1}>
+                                <UserDetails/>
+                            </UserID.Provider>
                         </UserName.Provider>
                     </Row>
                     <Row className={"rowBorder"}>

@@ -33,7 +33,7 @@ const LangDetails = (lang_obj, lang_details) => {
         }
     }
 
-    return (
+     return (
         <>
             <td className={"cwTD"} style={{color: lang_info.color}}>
                 {lang_obj.name}:
@@ -52,10 +52,10 @@ const LangDetails = (lang_obj, lang_details) => {
 }
 
 export default function LangInfo() {
-    const url_lang_list = "http://127.0.0.1:8000/code_wars/LanguageInfo/"
+    const url_lang_list = "http://127.0.0.1:8000/CodeWars/LanguageInfo/"
     const lang_list = Request(url_lang_list, false)
 
-    const url_lang_details = "http://127.0.0.1:8000/code_wars/LanguageScores/"
+    const url_lang_details = "http://127.0.0.1:8000/CodeWars/LanguageScores/"
     const lang_data = Request(url_lang_details, false)
 
     let langData = <tr/>

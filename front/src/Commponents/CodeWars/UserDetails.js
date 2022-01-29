@@ -1,36 +1,41 @@
 import React, {useContext} from "react";
 
-import {UserName} from "./CodeWarsClient";
+import {UserID, UserName} from "./CodeWarsClient";
 
-import {Request} from "../../utils/utils";
+import {getTodayDate, getYesterdayDate, Request} from "../../utils/utils";
 
 import './CodeWars.css'
 
 
 export default function UserDetails() {
     const userName = useContext(UserName)
-    const url = "http://127.0.0.1:8000/code_wars/UserStatistics/"
+    const userID = useContext(UserID)
+    const url = "http://127.0.0.1:8000/CodeWars/UserStatistics/" + userID
 
     const data = Request(url, false)
 
     const position = (last, penultimate) => {
-        if (last['leaderboardPosition'] === penultimate['leaderboardPosition']) {
-            return last['leaderboardPosition'] + " No Changes"
-        } else if (last['leaderboardPosition'] < penultimate['leaderboardPosition']) {
-            return last['leaderboardPosition'] + " Up"
+        if (last['leaderboard_position'] === penultimate['leaderboard_position']) {
+            return last['leaderboard_position'] + " No Changes"
+        } else if (last['leaderboard_position'] < penultimate['leaderboard_position']) {
+            return last['leaderboard_position'] + " Up"
         } else {
-            return last['leaderboardPosition'] + " Down"
+            return last['leaderboard_position'] + " Down"
         }
     }
 
     const out = () => {
         if (data) {
-            const last = data['results'].find((score, index) => {
-                if (score.id === data.count)
+            console.log(data)
+            const last = data.find((score, index) => {
+                if (score.last_update === getTodayDate())
                     return true;
             })
-            const penultimate = data['results'].find((score, index) => {
-                if (score.id === data.count - 1)
+
+            console.log(last)
+
+            const penultimate = data.find((score, index) => {
+                if (score.last_update === getYesterdayDate())
                     return true;
             })
 
