@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 
 import {UserID, UserName} from "./CodeWarsClient";
 
-import {getTodayDate, getYesterdayDate, Request} from "../../utils/utils";
+import {Request} from "../../utils/utils";
 
 import './CodeWars.css'
 
@@ -15,6 +15,10 @@ export default function UserDetails() {
     const data = Request(url, false)
 
     const position = (last, penultimate) => {
+        if (!last['leaderboard_position'] || !penultimate['leaderboard_position']) {
+            return "No Data"
+        }
+
         if (last['leaderboard_position'] === penultimate['leaderboard_position']) {
             return last['leaderboard_position'] + " No Changes"
         } else if (last['leaderboard_position'] < penultimate['leaderboard_position']) {
@@ -26,18 +30,15 @@ export default function UserDetails() {
 
     const out = () => {
         if (data) {
-            console.log(data)
-            const last = data.find((score, index) => {
-                if (score.last_update === getTodayDate())
-                    return true;
+
+            const sorted_data = data.sort((a, b) => {
+                let da = new Date(a.last_update),
+                    db = new Date(b.last_update);
+                return da - db;
             })
 
-            console.log(last)
-
-            const penultimate = data.find((score, index) => {
-                if (score.last_update === getYesterdayDate())
-                    return true;
-            })
+            const last = sorted_data[sorted_data.length - 1]
+            const penultimate = sorted_data[sorted_data.length - 2]
 
             return (
                 <table className={"codeWarsTable"}>

@@ -54,3 +54,4 @@ class LanguageScores(Base):
 
     lang_id = Column(Integer, ForeignKey(LanguageInfos.id))
     lang = relationship("LanguageInfos")
+

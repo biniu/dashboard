@@ -163,8 +163,10 @@ async def read_language_scores(user_id: int, db: Session = Depends(get_db)):
             .filter(CodeWarsModels.CodeWarsUsers.id == user_id).first():
         raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
 
-    return db.query(CodeWarsModels.LanguageScores) \
+    lang_scores = db.query(CodeWarsModels.LanguageScores) \
         .filter(CodeWarsModels.LanguageScores.user_id == user_id).all()
+
+    return lang_scores
 
 
 @router.get("/LanguageScores/{user_id}/{lang_id}")
