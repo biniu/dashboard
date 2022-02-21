@@ -35,7 +35,11 @@ export default function CodeWarsClient() {
 
                 <Col>
                     <Row className={"rowBorder"}>
-                        <LangInfo/>
+                        <UserName.Provider value={"biniu"}>
+                            <UserID.Provider value={1}>
+                                <LangInfo/>
+                            </UserID.Provider>
+                        </UserName.Provider>
                     </Row>
                     {/*<Row className={"rowBorder"}>*/}
                     {/*    <CircularProgressbar value={percentage} text={`${percentage}%`}*/}
