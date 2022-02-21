@@ -92,7 +92,8 @@ def sync() -> None:
             data={
                 "score": lang_stats['score'],
                 "rank": lang_stats['rank'],
-                "lang_id": lang_id
+                "lang_id": lang_id,
+                "last_update": datetime.today().strftime('%Y-%m-%d')
             }
         )
 

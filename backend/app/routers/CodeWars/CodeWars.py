@@ -1,6 +1,7 @@
 from datetime import datetime, date
 
 from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 
@@ -36,7 +37,7 @@ class CodeWarsUserStatistic(BaseModel):
     leaderboard_position: int
     kata_completed: int
 
-    last_update: Optional[date]
+    last_update: date
 
 
 class LanguageInfo(BaseModel):
@@ -49,7 +50,7 @@ class LanguageScore(BaseModel):
 
     lang_id: int
 
-    last_update: Optional[date]
+    last_update: date
 
 
 @router.get("/users")
@@ -163,10 +164,20 @@ async def read_language_scores(user_id: int, db: Session = Depends(get_db)):
             .filter(CodeWarsModels.CodeWarsUsers.id == user_id).first():
         raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
 
-    lang_scores = db.query(CodeWarsModels.LanguageScores) \
-        .filter(CodeWarsModels.LanguageScores.user_id == user_id).all()
+    query = select(
+        (CodeWarsModels.LanguageScores, CodeWarsModels.LanguageInfos.name),
+    ).select_from(
+        CodeWarsModels.LanguageScores
+    ).where(
+        CodeWarsModels.LanguageScores.lang_id == CodeWarsModels.LanguageInfos.id
+    )
 
-    return lang_scores
+    result = engine.execute(query)
+    out = []
+    for row in result:
+        out.append(dict(row))
+
+    return out
 
 
 @router.get("/LanguageScores/{user_id}/{lang_id}")
