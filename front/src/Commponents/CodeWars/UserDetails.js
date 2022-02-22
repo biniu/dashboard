@@ -18,13 +18,16 @@ export default function UserDetails() {
         if (!last['leaderboard_position'] || !penultimate['leaderboard_position']) {
             return "No Data"
         }
-
-        if (last['leaderboard_position'] === penultimate['leaderboard_position']) {
-            return last['leaderboard_position'] + " No Changes"
-        } else if (last['leaderboard_position'] < penultimate['leaderboard_position']) {
-            return last['leaderboard_position'] + " Up"
-        } else {
-            return last['leaderboard_position'] + " Down"
+        try {
+            if (last['leaderboard_position'] === penultimate['leaderboard_position']) {
+                return last['leaderboard_position'] + " No Changes"
+            } else if (last['leaderboard_position'] < penultimate['leaderboard_position']) {
+                return last['leaderboard_position'] + " Up"
+            } else {
+                return last['leaderboard_position'] + " Down"
+            }
+        } catch (TypeError) {
+            return "No Data"
         }
     }
 
