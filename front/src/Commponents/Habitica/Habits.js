@@ -11,24 +11,28 @@ export default function Habits() {
     const url = "http://127.0.0.1:8000/Habitica/Habits/" + userID
     const data = Request(url, false)
 
-    let todos_not_done = <></>
+    let habits = <></>
 
     console.log(data)
 
     if(data) {
 
-        const not_done = data.filter(todo => !todo.completed)
-
-        todos_not_done = not_done.map((todo) => (
-            <tr className={todo.priority === 1 ? "todoEntryTRP1" : "todoEntryTR"}>
+        habits = data.map((habit) => (
+            <tr className={habit.priority === 1 ? "todoEntryTRP1" : "todoEntryTR"}>
                 <td>
-                    ▷ {todo.id}
+                    ▷ {habit.id}
                 </td>
                 <td className={"todoEntryTD"}>
-                    {todo.priority}
+                    {habit.priority}
                 </td>
                 <td className={"todoEntryTD"}>
-                    {todo.text}
+                    {habit.text}
+                </td>
+                <td className={"todoEntryTD"}>
+                    UP {habit.counterUp}
+                </td>
+                <td className={"todoEntryTD"}>
+                    DOWN {habit.counterDown}
                 </td>
             </tr>
         ))
@@ -40,7 +44,7 @@ export default function Habits() {
                 Habits
             </div>
             <table>
-                {todos_not_done}
+                {habits}
             </table>
         </>
     )

@@ -11,24 +11,22 @@ export default function Dailies() {
     const url = "http://127.0.0.1:8000/Habitica/Dailies/" + userID
     const data = Request(url, false)
 
-    let todos_not_done = <></>
-
-    console.log(data)
-
+    let due_dailies = <></>
+    
     if(data) {
 
-        const not_done = data.filter(todo => !todo.completed)
+        const not_done = data.filter(daily => daily.isDue && !daily.completed)
 
-        todos_not_done = not_done.map((todo) => (
-            <tr className={todo.priority === 1 ? "todoEntryTRP1" : "todoEntryTR"}>
+        due_dailies = not_done.map((daily) => (
+            <tr className={daily.priority === 1 ? "todoEntryTRP1" : "todoEntryTR"}>
                 <td>
-                    ▷ {todo.id}
+                    ▷ {daily.id}
                 </td>
                 <td className={"todoEntryTD"}>
-                    {todo.priority}
+                    {daily.priority}
                 </td>
                 <td className={"todoEntryTD"}>
-                    {todo.text}
+                    {daily.text}
                 </td>
             </tr>
         ))
@@ -37,10 +35,10 @@ export default function Dailies() {
     return (
         <>
             <div className={"todoHeader"}>
-                Dailys
+                Dailies
             </div>
             <table>
-                {todos_not_done}
+                {due_dailies}
             </table>
         </>
     )
