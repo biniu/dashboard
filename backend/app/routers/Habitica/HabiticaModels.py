@@ -98,6 +98,7 @@ class HabiticaDailies(Base):
     text = Column(String)
 
     completed = Column(Boolean)
+    isDue = Column(Boolean)
 
     user_id = Column(Integer, ForeignKey(HabiticaUsers.id))
     user = relationship("HabiticaUsers")

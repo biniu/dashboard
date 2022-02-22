@@ -3,7 +3,7 @@ from pathlib import Path
 
 import requests
 
-from pprint import pprint as pp
+from pprint import pprint as pp, pprint
 from dataclasses import dataclass
 from datetime import date, datetime
 
@@ -40,6 +40,7 @@ class HabiticaDaily:
     priority: int
     text: str
     completed: bool
+    isDue: bool
     history: List[HabiticaDailyHistoryEntry]
 
 
@@ -180,6 +181,7 @@ class HabiticaInterface:
                 priority=self._map_habitica_priority(daily['priority']),
                 text=daily['text'],
                 completed=daily['completed'],
+                isDue=daily['isDue'],
                 history=daily_history
             )
 
@@ -226,4 +228,4 @@ if __name__ == "__main__":
     # pp(habitica_client.get_todos())
     # pp(habitica_client.get_done_todos())
 
-    habitica_client.get_habits()
+    pprint(habitica_client.get_habits())

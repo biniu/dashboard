@@ -90,6 +90,7 @@ class HabiticaDaily(BaseModel):
     priority: int
     text: str
     completed: bool
+    isDue: bool
     history: List[HabiticaDailyHistoryEntry] = []
 
     class Config:
@@ -229,8 +230,8 @@ async def create_habits(user_id: int, habit: HabiticaHabit, db: Session = Depend
     for elem in habit.history:
         history_entry = HabiticaModels.HabiticaHabitHistory()
         history_entry.date = elem.date
-        history_entry.scoredUp = elem.scoreUp
-        history_entry.scoredDown = elem.scoreDown
+        history_entry.scoredUp = elem.scoredUp
+        history_entry.scoredDown = elem.scoredDown
 
         habit_model.history.append(history_entry)
 
@@ -270,8 +271,8 @@ async def update_habits(user_id: int, habit: HabiticaHabit, db: Session = Depend
     for elem in habit.history:
         history_entry = HabiticaModels.HabiticaHabitHistory()
         history_entry.date = elem.date
-        history_entry.scoredUp = elem.scoreUp
-        history_entry.scoredDown = elem.scoreDown
+        history_entry.scoredUp = elem.scoredUp
+        history_entry.scoredDown = elem.scoredDown
 
         habit_model.history.append(history_entry)
 
@@ -294,6 +295,7 @@ async def read_dailies(user_id: int, db: Session = Depends(get_db)):
         .filter(HabiticaModels.HabiticaDailies.user_id == user_id)
     return dailies.all()
 
+
 @router.post("/Dailies/{user_id}")
 async def create_dailies(user_id: int, daily: HabiticaDaily, db: Session = Depends(get_db)):
     if not db.query(HabiticaModels.HabiticaUsers) \
@@ -314,6 +316,7 @@ async def create_dailies(user_id: int, daily: HabiticaDaily, db: Session = Depen
     daily_model.text = daily.text
 
     daily_model.completed = daily.completed
+    daily_model.isDue = daily.isDue
     daily_model.user_id = user_id
 
     for elem in daily.history:
