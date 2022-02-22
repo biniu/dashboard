@@ -1,20 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import {Request} from "../../utils/utils";
+import {UserID, UserName} from "../CodeWars/CodeWarsClient";
 
 
 export default function Todos() {
+    const userName = useContext(UserName)
+    const userID = useContext(UserID)
 
-    const url = "http://127.0.0.1:8000/habitica/Todos/"
+    const url = "http://127.0.0.1:8000/Habitica/Todo/" + userID
     const data = Request(url, false)
 
     let todos_not_done = <></>
 
-    console.log(data['results'])
+    if(data) {
 
-    if(data['results']) {
-
-        const not_done = data['results'].filter(todo => !todo.completed)
+        const not_done = data.filter(todo => !todo.completed)
 
         todos_not_done = not_done.map((todo) => (
             <tr className={todo.priority === 1 ? "todoEntryTRP1" : "todoEntryTR"}>
