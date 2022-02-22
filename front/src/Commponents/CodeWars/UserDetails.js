@@ -15,9 +15,6 @@ export default function UserDetails() {
     const data = Request(url, false)
 
     const position = (last, penultimate) => {
-        if (!last['leaderboard_position'] || !penultimate['leaderboard_position']) {
-            return "No Data"
-        }
         try {
             if (last['leaderboard_position'] === penultimate['leaderboard_position']) {
                 return last['leaderboard_position'] + " No Changes"
