@@ -354,6 +354,7 @@ async def update_dailies(user_id: int, daily: HabiticaDaily, db: Session = Depen
     daily_model.everyX = daily.everyX
     daily_model.priority = daily.priority
     daily_model.text = daily.text
+    daily_model.isDue = daily.isDue
 
     daily_model.completed = daily.completed
     daily_model.user_id = user_id
