@@ -193,6 +193,30 @@ async def update_todo(user_id: int, todo: HabiticaTodo, db: Session = Depends(ge
     }
 
 
+@router.delete("/Todo/{user_id}")
+async def delete_todo(user_id: int, habitica_id: str, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    todo_model = db.query(HabiticaModels.HabiticaTodos) \
+        .filter(HabiticaModels.HabiticaTodos.habiticaID == habitica_id).first()
+
+    if not todo_model:
+        raise HTTPException(status_code=400, detail=f"Todo with habiticaID {habitica_id} NOT exist")
+
+    db.query(HabiticaModels.HabiticaTodos) \
+        .filter(HabiticaModels.HabiticaTodos.habiticaID == habitica_id)\
+        .delete()
+
+    db.commit()
+
+    return {
+        'status': 201,
+        'transaction': 'Successful'
+    }
+
+
 @router.get("/Habits/{user_id}", response_model=List[HabiticaHabit])
 async def read_habits(user_id: int, db: Session = Depends(get_db)):
     if not db.query(HabiticaModels.HabiticaUsers) \
@@ -285,6 +309,30 @@ async def update_habits(user_id: int, habit: HabiticaHabit, db: Session = Depend
     }
 
 
+@router.delete("/Habits/{user_id}")
+async def delete_habits(user_id: int, habitica_id: str, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    habit_model =  db.query(HabiticaModels.HabiticaHabits) \
+            .filter(HabiticaModels.HabiticaHabits.habiticaID == habitica_id).first()
+
+    if not habit_model:
+        raise HTTPException(status_code=400, detail=f"Todo with habiticaID {habitica_id} already exist")
+
+    db.query(HabiticaModels.HabiticaHabits) \
+        .filter(HabiticaModels.HabiticaHabits.habiticaID == habitica_id)\
+        .delete()
+
+    db.commit()
+
+    return {
+        'status': 201,
+        'transaction': 'Successful'
+    }
+
+
 @router.get("/Dailies/{user_id}", response_model=List[HabiticaDaily])
 async def read_dailies(user_id: int, db: Session = Depends(get_db)):
     if not db.query(HabiticaModels.HabiticaUsers) \
@@ -368,6 +416,30 @@ async def update_dailies(user_id: int, daily: HabiticaDaily, db: Session = Depen
         daily_model.history.append(daily_entry)
 
     db.add(daily_model)
+    db.commit()
+
+    return {
+        'status': 201,
+        'transaction': 'Successful'
+    }
+
+
+@router.delete("/Dailies/{user_id}")
+async def delete_dailies(user_id: int, habitica_id: str, db: Session = Depends(get_db)):
+    if not db.query(HabiticaModels.HabiticaUsers) \
+            .filter(HabiticaModels.HabiticaUsers.id == user_id).first():
+        raise HTTPException(status_code=400, detail=f"User with ID {user_id} not exist")
+
+    daily_model = db.query(HabiticaModels.HabiticaDailies) \
+        .filter(HabiticaModels.HabiticaDailies.habiticaID == habitica_id).first()
+
+    if not daily_model:
+        raise HTTPException(status_code=400, detail=f"Daily with habiticaID {habitica_id} NOT exist")
+
+    db.query(HabiticaModels.HabiticaDailies) \
+        .filter(HabiticaModels.HabiticaDailies.habiticaID == habitica_id)\
+        .delete()
+
     db.commit()
 
     return {
