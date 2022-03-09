@@ -50,6 +50,21 @@ def data_put(url: str, data: json):
         raise requests.HTTPError
 
 
+def data_delete(url: str, data: json):
+    with requests.Session() as session:
+        session = requests.Session()
+        response = session.delete(url, json=data)
+
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print("Request failed!")
+        print(response.status_code)
+        print(response.reason)
+        pprint(response.json())
+        raise requests.HTTPError
+
+
 def sync_todos(habitica_todos: list, dashboard_todos: list, user_id: int) -> None:
     for h_todo in habitica_todos:
         todo_exist = False
@@ -89,6 +104,24 @@ def sync_todos(habitica_todos: list, dashboard_todos: list, user_id: int) -> Non
                     "priority": h_todo.priority,
                     "text": h_todo.text
                 }
+            )
+
+
+def remove_todos(habitica_todos: list, dashboard_todos: list, user_id: int) -> None:
+
+    for d_todo in dashboard_todos:
+        if d_todo['completed']:
+            continue
+        todo_exist = False
+        for h_todo in habitica_todos:
+            if d_todo['habiticaID'] == h_todo.habiticaID:
+                todo_exist = True
+                break
+        if not todo_exist:
+            print(f"Todo to remove {d_todo['text']}")
+            data_delete(
+                url=f"http://127.0.0.1:8000/Habitica/Todo/{user_id}?habitica_id={d_todo['habiticaID']}",
+                data={}
             )
 
 
@@ -181,20 +214,29 @@ def sync() -> None:
     dashboard_habits = data_get(url=f"http://127.0.0.1:8000/Habitica/Habits/{user_id}")
     habitica_todos = habitica_client.get_todos()
     habitica_done_todos = habitica_client.get_done_todos()
-    habitica_dailies = habitica_client.get_dailies()
-    habitica_habits = habitica_client.get_habits()
+    # habitica_dailies = habitica_client.get_dailies()
+    # habitica_habits = habitica_client.get_habits()
+
+    habitica_all_tasks = habitica_todos + habitica_done_todos
+
+    print(len(habitica_todos))
+    print(len(habitica_done_todos))
+    print(len(habitica_all_tasks))
 
     print("Sync todos")
-    sync_todos(habitica_todos, dashboard_todos, user_id)
+    # sync_todos(habitica_todos, dashboard_todos, user_id)
 
     print("Sync done todos")
-    sync_todos(habitica_done_todos, dashboard_todos, user_id)
+    # sync_todos(habitica_done_todos, dashboard_todos, user_id)
+
+    print("Remove todos")
+    remove_todos(habitica_all_tasks, dashboard_todos, user_id)
 
     print("Sync dailies")
-    sync_dailies(habitica_dailies, dashboard_dailies, user_id)
+    # sync_dailies(habitica_dailies, dashboard_dailies, user_id)
 
     print("Sync habits")
-    sync_habits(habitica_habits, dashboard_habits, user_id)
+    # sync_habits(habitica_habits, dashboard_habits, user_id)
 
 
 if __name__ == '__main__':
