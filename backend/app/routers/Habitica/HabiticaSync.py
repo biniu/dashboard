@@ -214,29 +214,25 @@ def sync() -> None:
     dashboard_habits = data_get(url=f"http://127.0.0.1:8000/Habitica/Habits/{user_id}")
     habitica_todos = habitica_client.get_todos()
     habitica_done_todos = habitica_client.get_done_todos()
-    # habitica_dailies = habitica_client.get_dailies()
-    # habitica_habits = habitica_client.get_habits()
+    habitica_dailies = habitica_client.get_dailies()
+    habitica_habits = habitica_client.get_habits()
 
     habitica_all_tasks = habitica_todos + habitica_done_todos
 
-    print(len(habitica_todos))
-    print(len(habitica_done_todos))
-    print(len(habitica_all_tasks))
-
     print("Sync todos")
-    # sync_todos(habitica_todos, dashboard_todos, user_id)
+    sync_todos(habitica_todos, dashboard_todos, user_id)
 
     print("Sync done todos")
-    # sync_todos(habitica_done_todos, dashboard_todos, user_id)
+    sync_todos(habitica_done_todos, dashboard_todos, user_id)
 
     print("Remove todos")
     remove_todos(habitica_all_tasks, dashboard_todos, user_id)
 
     print("Sync dailies")
-    # sync_dailies(habitica_dailies, dashboard_dailies, user_id)
+    sync_dailies(habitica_dailies, dashboard_dailies, user_id)
 
     print("Sync habits")
-    # sync_habits(habitica_habits, dashboard_habits, user_id)
+    sync_habits(habitica_habits, dashboard_habits, user_id)
 
 
 if __name__ == '__main__':
