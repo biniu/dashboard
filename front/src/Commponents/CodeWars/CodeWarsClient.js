@@ -16,25 +16,25 @@ export default function CodeWarsClient() {
 
     return (
         <Container fluid className={"codeWars"}>
-            <Row className={"rowBorder"}>
+            <Row>
                 CodeWars
             </Row>
-            <Row className={"rowBorder"}>
+            <Row>
                 <Col>
-                    <Row className={"rowBorder"}>
+                    <Row>
                         <UserName.Provider value={"biniu"}>
                             <UserID.Provider value={1}>
                                 <UserDetails/>
                             </UserID.Provider>
                         </UserName.Provider>
                     </Row>
-                    <Row className={"rowBorder"}>
+                    <Row>
                         {/*<StreaksView/>*/}
                     </Row>
                 </Col>
 
                 <Col>
-                    <Row className={"rowBorder"}>
+                    <Row>
                         <UserName.Provider value={"biniu"}>
                             <UserID.Provider value={1}>
                                 <LangInfo/>
