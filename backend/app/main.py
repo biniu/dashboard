@@ -22,3 +22,8 @@ app.add_middleware(
 
 app.include_router(CodeWars.router)
 app.include_router(Habitica.router)
+
+
+@app.get("/")
+async def i_am_alive():
+    return {"I'm alive!!!!!!!"}
