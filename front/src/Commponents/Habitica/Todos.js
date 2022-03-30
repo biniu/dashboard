@@ -8,7 +8,7 @@ export default function Todos() {
     const userName = useContext(UserName)
     const userID = useContext(UserID)
 
-    const url = "http://127.0.0.1:8000/Habitica/Todo/" + userID
+    const url = "/api/Habitica/Todo/" + userID
     const data = Request(url, false)
 
     let todos_not_done = <></>

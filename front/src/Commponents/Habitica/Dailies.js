@@ -8,7 +8,7 @@ export default function Dailies() {
     const userName = useContext(UserName)
     const userID = useContext(UserID)
 
-    const url = "http://127.0.0.1:8000/Habitica/Dailies/" + userID
+    const url = "/api/Habitica/Dailies/" + userID
     const data = Request(url, false)
 
     let due_dailies = <></>

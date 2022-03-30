@@ -8,7 +8,7 @@ export default function Habits() {
     const userName = useContext(UserName)
     const userID = useContext(UserID)
 
-    const url = "http://127.0.0.1:8000/Habitica/Habits/" + userID
+    const url = "/api/Habitica/Habits/" + userID
     const data = Request(url, false)
 
     let habits = <></>

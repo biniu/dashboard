@@ -10,7 +10,7 @@ import './CodeWars.css'
 export default function UserDetails() {
     const userName = useContext(UserName)
     const userID = useContext(UserID)
-    const url = "http://127.0.0.1:8000/CodeWars/UserStatistics/" + userID
+    const url = "/api/CodeWars/UserStatistics/" + userID
 
     const data = Request(url, false)
 

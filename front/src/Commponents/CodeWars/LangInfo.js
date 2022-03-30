@@ -57,7 +57,7 @@ export default function LangInfo() {
     const userName = useContext(UserName)
     const userID = useContext(UserID)
 
-    const url_lang_list = "http://127.0.0.1:8000/CodeWars/LanguageScores/" + userID
+    const url_lang_list = "/api/CodeWars/LanguageScores/" + userID
     const lang_list = Request(url_lang_list, false)
 
     let langData = <tr/>
