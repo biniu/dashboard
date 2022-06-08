@@ -1,4 +1,4 @@
-from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DATETIME
+from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DateTime
 from sqlalchemy.orm import relationship
 
 from datetime import datetime
@@ -21,8 +21,8 @@ class HabiticaTodos(Base):
     id = Column(Integer, primary_key=True, index=True)
     habiticaID = Column(String)
 
-    createdAt = Column(DATETIME)
-    completedAt = Column(DATETIME, nullable=True)
+    createdAt = Column(DateTime)
+    completedAt = Column(DateTime, nullable=True)
     completed = Column(Boolean)
 
     priority = Column(Integer)
@@ -41,7 +41,7 @@ class HabiticaHabits(Base):
     id = Column(Integer, primary_key=True, index=True)
     habiticaID = Column(String)
 
-    createdAt = Column(DATETIME)
+    createdAt = Column(DateTime)
 
     up = Column(Boolean)
     down = Column(Boolean)
@@ -83,7 +83,7 @@ class HabiticaDailies(Base):
     id = Column(Integer, primary_key=True, index=True)
     habiticaID = Column(String)
 
-    createdAt = Column(DATETIME)
+    createdAt = Column(DateTime)
 
     # TODO: change to enum after migrating to postgreSQL
     # tmp defs:

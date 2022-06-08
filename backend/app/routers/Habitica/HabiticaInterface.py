@@ -2,6 +2,7 @@ import configparser as configparser
 from pathlib import Path
 
 import requests
+import os
 
 from pprint import pprint as pp, pprint
 from dataclasses import dataclass
@@ -73,10 +74,12 @@ class HabiticaInterface:
 
     def __init__(self) -> None:
 
-        config = configparser.ConfigParser()
-        config.readfp(open(f"{Path.home()}/.config/dashboard_config/config.cfg"))
-        self._USER_ID = config.get('Habitica', 'USER_ID')
-        self._TOKEN = config.get('Habitica', 'USER_KEY')
+        # config = configparser.ConfigParser()
+        # config.readfp(open(f"{Path.home()}/.config/dashboard_config/config.cfg"))
+        # self._USER_ID = config.get('Habitica', 'USER_ID')
+        # self._TOKEN = config.get('Habitica', 'USER_KEY')
+        self._USER_ID = os.getenv('USER_ID')
+        self._TOKEN = os.getenv('USER_KEY')
 
     def _date_request(self, url):
         with requests.Session() as session:

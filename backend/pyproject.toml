@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dashboard_backend"
+version = "0.1.0"
+description = ""
+authors = ["biniu <dawid.binkowski93@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+uvicorn = "^0.17.6"
+fastapi = "^0.75.2"
+SQLAlchemy = "^1.4.35"
+psycopg2 = "^2.9.3"
+dataclasses-json = "^0.5.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
