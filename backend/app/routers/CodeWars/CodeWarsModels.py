@@ -1,7 +1,9 @@
+from datetime import datetime, date
+
+from pydantic import BaseModel
 from sqlalchemy import ForeignKey, Column, Integer, String, DATE
 from sqlalchemy.orm import relationship
 
-from datetime import datetime
 from app.database import Base
 
 
@@ -55,3 +57,27 @@ class LanguageScores(Base):
     lang_id = Column(Integer, ForeignKey(LanguageInfos.id))
     lang = relationship("LanguageInfos")
 
+
+class CodeWarsUser(BaseModel):
+    name: str
+
+
+class CodeWarsUserStatistic(BaseModel):
+    honor: int
+    leaderboard_position: int
+    kata_completed: int
+
+    last_update: date
+
+
+class LanguageInfo(BaseModel):
+    name: str
+
+
+class LanguageScore(BaseModel):
+    score: int
+    rank: int
+
+    lang_id: int
+
+    last_update: date
