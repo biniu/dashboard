@@ -1,16 +1,13 @@
-import configparser as configparser
-from pathlib import Path
-
-import requests
 import os
-
-from pprint import pprint as pp, pprint
+import configparser as configparser
 from dataclasses import dataclass
 from datetime import date, datetime
-
+from pathlib import Path
+from pprint import pprint
 from typing import List
-from dataclasses_json import dataclass_json
 
+import requests
+from dataclasses_json import dataclass_json
 
 
 @dataclass
@@ -89,12 +86,6 @@ class HabiticaInterface:
 
             response = session.get(url)
 
-        # self.logger.debug(response.status_code)
-        # self.logger.debug(response.reason)
-        # self.logger.debug(response.json())
-        #
-        # pp(response.json())
-
         if response.status_code == 200:
             return response.json()
         else:
@@ -128,7 +119,7 @@ class HabiticaInterface:
         for todo in todos['data']:
             todo_model = HabiticaTodo(
                 habiticaID=todo['id'],
-                createdAt=todo['createdAt'],
+                createdAt=datetime.strptime(todo['createdAt'], '%Y-%m-%dT%H:%M:%S.%fZ'),
                 completedAt=None,
                 completed=False,
                 priority=self._map_habitica_priority(todo['priority']),
@@ -149,7 +140,7 @@ class HabiticaInterface:
         for todo in todos['data']:
             todo_model = HabiticaTodo(
                 habiticaID=todo['id'],
-                createdAt=todo['createdAt'],
+                createdAt=datetime.strptime(todo['createdAt'], '%Y-%m-%dT%H:%M:%S.%fZ'),
                 completedAt=todo['dateCompleted'],
                 completed=True,
                 priority=self._map_habitica_priority(todo['priority']),
@@ -171,14 +162,15 @@ class HabiticaInterface:
             daily_history = []
             for elem in daily['history']:
                 history_model = HabiticaDailyHistoryEntry(
-                    date=elem['date'],
+                    # need to be / 1000 -> date from habitica is in milliseconds
+                    date=date.fromtimestamp(int(elem['date'] / 1000)),
                     due=elem['isDue'],
                     completed=elem['completed']
                 )
                 daily_history.append(history_model)
             daily_model = HabiticaDaily(
                 habiticaID=daily['id'],
-                createdAt=daily['createdAt'],
+                createdAt=datetime.strptime(daily['createdAt'], '%Y-%m-%dT%H:%M:%S.%fZ'),
                 frequency=daily['frequency'],
                 everyX=daily['everyX'],
                 priority=self._map_habitica_priority(daily['priority']),
@@ -201,7 +193,8 @@ class HabiticaInterface:
             habit_history = []
             for elem in habit['history']:
                 history_model = HabiticaHabitHistoryEntry(
-                    date=elem['date'],
+                    # need to be / 1000 -> date from habitica is in milliseconds
+                    date=date.fromtimestamp(int(elem['date'] / 1000)),
                     scoredUp=elem['scoredUp'],
                     scoredDown=elem['scoredDown']
                 )
@@ -209,7 +202,8 @@ class HabiticaInterface:
 
             habit_model = HabiticaHabit(
                 habiticaID=habit['id'],
-                createdAt=habit['createdAt'],
+                # createdAt=habit['createdAt'],
+                createdAt=datetime.strptime(habit['createdAt'], '%Y-%m-%dT%H:%M:%S.%fZ'),
                 frequency=habit['frequency'],
                 priority=self._map_habitica_priority(habit['priority']),
                 text=habit['text'],
