@@ -21,7 +21,7 @@ services:
   frontend:
     build: ./front
     ports:
-      - "8080:80"
+      - "8090:80"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy-data:/data
