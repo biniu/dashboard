@@ -6,7 +6,8 @@ from requests import Session
 from app.database import get_db
 from app.routers.CodeWars import CodeWarsUtils
 from app.routers.CodeWars.CodeWarsInterface import CodeWarsInterface
-from app.routers.CodeWars.CodeWarsModels import CodeWarsUser, CodeWarsUserStatistic, LanguageInfo, LanguageScore
+from app.routers.CodeWars.CodeWarsModels import CodeWarsUser, \
+    CodeWarsUserStatistic, LanguageInfo, LanguageScore
 
 
 def sync(db: Session = Depends(get_db)) -> None:
@@ -20,7 +21,8 @@ def sync(db: Session = Depends(get_db)) -> None:
         user_id = CodeWarsUtils.get_user_id(user_name, db)
     else:
         print("Creating user")
-        user_id = CodeWarsUtils.create_user(user=CodeWarsUser(name=user_name), db=db)
+        user_id = CodeWarsUtils.create_user(user=CodeWarsUser(name=user_name),
+                                            db=db)
 
     print(f"user_id {user_id}")
 
@@ -44,7 +46,8 @@ def sync(db: Session = Depends(get_db)) -> None:
         if CodeWarsUtils.lang_with_name_exist(language, db):
             lang_id = CodeWarsUtils.get_lang_id(language, db)
         else:
-            lang_id = CodeWarsUtils.create_language_infos(language_info=LanguageInfo(name=language), db=db)
+            lang_id = CodeWarsUtils.create_language_infos(
+                language_info=LanguageInfo(name=language), db=db)
 
         print(f"lang_id {lang_id}")
         lang_stats = code_wars_client.get_language_statistics(language)

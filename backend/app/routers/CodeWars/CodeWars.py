@@ -3,7 +3,8 @@ from sqlalchemy.orm import Session
 
 from app.database import engine, get_db
 from app.routers.CodeWars import CodeWarsModels, CodeWarsUtils, CodeWarsSync
-from app.routers.CodeWars.CodeWarsModels import CodeWarsUser, CodeWarsUserStatistic, LanguageInfo, LanguageScore
+from app.routers.CodeWars.CodeWarsModels import CodeWarsUser, \
+    CodeWarsUserStatistic, LanguageInfo, LanguageScore
 
 router = APIRouter(
     prefix="/CodeWars",
@@ -49,7 +50,9 @@ async def read_user_statistics(user_id: int, db: Session = Depends(get_db)):
 
 
 @router.post("/UserStatistics/{user_id}")
-async def create_user_statistics(user_id: int, user_statistics: CodeWarsUserStatistic, db: Session = Depends(get_db)):
+async def create_user_statistics(user_id: int,
+                                 user_statistics: CodeWarsUserStatistic,
+                                 db: Session = Depends(get_db)):
     try:
         CodeWarsUtils.create_user_statistics(user_id, user_statistics, db)
         return successful_response(201)
@@ -63,7 +66,8 @@ async def read_language_infos(db: Session = Depends(get_db)):
 
 
 @router.post("/LanguageInfos")
-async def create_language_infos(language_info: LanguageInfo, db: Session = Depends(get_db)):
+async def create_language_infos(language_info: LanguageInfo,
+                                db: Session = Depends(get_db)):
     try:
         lang_id = CodeWarsUtils.create_language_infos(language_info, db)
     except HTTPException as ex:
@@ -85,7 +89,8 @@ async def read_language_scores(user_id: int, db: Session = Depends(get_db)):
 
 
 @router.get("/LanguageScores/{user_id}/{lang_id}")
-async def read_language_scores(user_id: int, lang_id: int, db: Session = Depends(get_db)):
+async def read_language_scores(user_id: int, lang_id: int,
+                               db: Session = Depends(get_db)):
     try:
         return CodeWarsUtils.get_language_scores(user_id, lang_id, db)
     except HTTPException as ex:
@@ -93,9 +98,11 @@ async def read_language_scores(user_id: int, lang_id: int, db: Session = Depends
 
 
 @router.post("/LanguageScores/{user_id}")
-async def create_language_scores(user_id: int, language_score: LanguageScore, db: Session = Depends(get_db)):
+async def create_language_scores(user_id: int, language_score: LanguageScore,
+                                 db: Session = Depends(get_db)):
     try:
-        lang_score_id = CodeWarsUtils.create_language_scores(user_id, language_score, db)
+        lang_score_id = CodeWarsUtils.create_language_scores(user_id,
+                                                             language_score, db)
     except HTTPException as ex:
         raise ex
 

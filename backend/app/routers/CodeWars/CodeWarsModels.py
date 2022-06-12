@@ -24,7 +24,8 @@ class CodeWarsUserStatistics(Base):
     honor = Column(Integer)
     leaderboard_position = Column(Integer)
     kata_completed = Column(Integer)
-    last_update = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
+    last_update = Column(DATE,
+                         server_default=datetime.today().strftime('%Y-%m-%d'))
 
     user_id = Column(Integer, ForeignKey(CodeWarsUsers.id))
     user = relationship("CodeWarsUsers")
@@ -49,7 +50,8 @@ class LanguageScores(Base):
     id = Column(Integer, primary_key=True, index=True)
     score = Column(Integer)
     rank = Column(Integer)
-    last_update = Column(DATE, server_default=datetime.today().strftime('%Y-%m-%d'))
+    last_update = Column(DATE,
+                         server_default=datetime.today().strftime('%Y-%m-%d'))
 
     user_id = Column(Integer, ForeignKey(CodeWarsUsers.id))
     user = relationship("CodeWarsUsers")
