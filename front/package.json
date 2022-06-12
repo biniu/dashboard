@@ -1,22 +1,19 @@
 {
-  "name": "dashboard",
+  "name": "front",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.22.0",
-    "bootstrap": "^5.0.1",
-    "g": "^2.0.1",
-    "http-proxy-middleware": "^0.19.2",
-    "json-server": "^0.16.3",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.6.0",
-    "react-circular-progressbar": "^2.0.4",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3",
+    "http-proxy-middleware": "^2.0.6",
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint-plugin-jest": "^24.3.6"
   }
 }

@@ -47,6 +47,7 @@ const LangDetails = (lang_obj) => {
 
                 <progress max={x} value={y}> {percent} </progress>
                 {percent}%
+
             </td>
         </>
     )

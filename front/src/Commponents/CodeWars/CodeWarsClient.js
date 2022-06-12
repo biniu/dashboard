@@ -5,7 +5,7 @@ import {Col, Container, Row} from "react-bootstrap";
 
 import UserDetails from "./UserDetails";
 import StreaksView from "./StreaksView";
-import {CircularProgressbar} from "react-circular-progressbar";
+// import {CircularProgressbar} from "react-circular-progressbar";
 import LangInfo from "./LangInfo";
 
 export const UserName = createContext("biniu");
