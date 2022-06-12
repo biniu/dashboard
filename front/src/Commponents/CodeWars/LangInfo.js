@@ -4,6 +4,7 @@ import './CodeWars.css'
 
 import {Request} from "../../utils/utils";
 import {UserID, UserName} from "./CodeWarsClient";
+import {ProgressBar} from "react-bootstrap";
 
 
 const LangDetails = (lang_obj) => {
@@ -34,6 +35,10 @@ const LangDetails = (lang_obj) => {
     console.log("lang_obj")
     console.log(lang_obj)
 
+    const progressInstance = (
+        <ProgressBar now={percent} label={`${percent}%`} />
+    );
+
      return (
         <>
             <td className={"cwTD"}>
@@ -43,11 +48,7 @@ const LangDetails = (lang_obj) => {
                 {lang_obj.score}
             </td>
             <td className={"cwTD"}>
-                {/*<ProgressBar now={percent} label={`${percent}%`} srOnly />*/}
-
-                <progress max={x} value={y}> {percent} </progress>
-                {percent}%
-
+                {progressInstance}
             </td>
         </>
     )
