@@ -6,8 +6,8 @@ class CodeWarsInterface():
     def __init__(self, user_name) -> None:
         self._user_name = user_name
         self._user_data = ""
-        self._date_request(url='http://localhost:3001/codeWarsUser')
-        # self._date_request(url=f'https://www.codewars.com/api/v1/users/{self._user_name}')
+        # self._date_request(url='http://localhost:3001/codeWarsUser')
+        self._date_request(url=f'https://www.codewars.com/api/v1/users/{self._user_name}')
 
     def _date_request(self, url: str) -> None:
         with requests.Session() as session:
