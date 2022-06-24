@@ -1,7 +1,7 @@
 from fastapi import Depends
 from requests import Session
 
-from app.database import get_db
+from app.db import get_db
 from app.routers.Habitica import HabiticaUtils
 from app.routers.Habitica.HabiticaModels import HabiticaUser, HabiticaTodo
 from .HabiticaInterface import HabiticaInterface

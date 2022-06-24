@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from sqlalchemy import ForeignKey, Column, Integer, String, DATE, Boolean, DateTime
 from sqlalchemy.orm import relationship
 
-from app.database import Base
+from app.db import Base
 
 
 class HabiticaUsers(Base):

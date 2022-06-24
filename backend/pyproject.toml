@@ -12,6 +12,7 @@ SQLAlchemy = "^1.4.35"
 psycopg2 = "^2.9.3"
 dataclasses-json = "^0.5.7"
 requests = "^2.27.1"
+pytest = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 

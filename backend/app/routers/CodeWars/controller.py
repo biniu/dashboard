@@ -1,10 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.database import engine, get_db
-from app.routers.CodeWars import CodeWarsModels, CodeWarsUtils, CodeWarsSync
-from app.routers.CodeWars.CodeWarsModels import CodeWarsUser, \
-    CodeWarsUserStatistic, LanguageInfo, LanguageScore
+from app.db import get_db
+from app.routers.CodeWars import CodeWarsSync
+from app.routers.CodeWars.service import CodeWarsService
+from .schema import CodeWarsUserSchema, \
+    CodeWarsUserStatisticSchema, LanguageInfoSchema, LanguageScoreSchema
 
 router = APIRouter(
     prefix="/CodeWars",
@@ -12,7 +13,11 @@ router = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
-CodeWarsModels.Base.metadata.create_all(bind=engine)
+
+# router = APIRouter()
+
+
+# CodeWarsModels.Base.metadata.create_all(bind=engine)
 
 
 @router.get("/sync")
@@ -24,13 +29,13 @@ async def sync(db: Session = Depends(get_db)):
 
 @router.get("/users")
 async def read_users(db: Session = Depends(get_db)):
-    return CodeWarsUtils.get_users(db)
+    return CodeWarsService.get_users(db)
 
 
 @router.post("/users")
-async def create_user(user: CodeWarsUser, db: Session = Depends(get_db)):
+async def create_user(user: CodeWarsUserSchema, db: Session = Depends(get_db)):
     try:
-        user_id = CodeWarsUtils.create_user(user, db)
+        user_id = CodeWarsService.create_user(user, db)
     except HTTPException as ex:
         raise ex
 
@@ -44,17 +49,17 @@ async def create_user(user: CodeWarsUser, db: Session = Depends(get_db)):
 @router.get("/UserStatistics/{user_id}")
 async def read_user_statistics(user_id: int, db: Session = Depends(get_db)):
     try:
-        return CodeWarsUtils.get_user_statistics(user_id, db)
+        return CodeWarsService.get_user_statistics(user_id, db)
     except HTTPException as ex:
         raise ex
 
 
 @router.post("/UserStatistics/{user_id}")
 async def create_user_statistics(user_id: int,
-                                 user_statistics: CodeWarsUserStatistic,
+                                 user_statistics: CodeWarsUserStatisticSchema,
                                  db: Session = Depends(get_db)):
     try:
-        CodeWarsUtils.create_user_statistics(user_id, user_statistics, db)
+        CodeWarsService.create_user_statistics(user_id, user_statistics, db)
         return successful_response(201)
     except HTTPException as ex:
         raise ex
@@ -62,14 +67,14 @@ async def create_user_statistics(user_id: int,
 
 @router.get("/LanguageInfos")
 async def read_language_infos(db: Session = Depends(get_db)):
-    return CodeWarsUtils.get_language_infos(db)
+    return CodeWarsService.get_language_infos(db)
 
 
 @router.post("/LanguageInfos")
-async def create_language_infos(language_info: LanguageInfo,
+async def create_language_infos(language_info: LanguageInfoSchema,
                                 db: Session = Depends(get_db)):
     try:
-        lang_id = CodeWarsUtils.create_language_infos(language_info, db)
+        lang_id = CodeWarsService.create_language_infos(language_info, db)
     except HTTPException as ex:
         raise ex
 
@@ -83,7 +88,7 @@ async def create_language_infos(language_info: LanguageInfo,
 @router.get("/LanguageScores/{user_id}")
 async def read_language_scores(user_id: int, db: Session = Depends(get_db)):
     try:
-        return CodeWarsUtils.get_languages_scores(user_id, db)
+        return CodeWarsService.get_languages_scores(user_id, db)
     except HTTPException as ex:
         raise ex
 
@@ -92,17 +97,19 @@ async def read_language_scores(user_id: int, db: Session = Depends(get_db)):
 async def read_language_scores(user_id: int, lang_id: int,
                                db: Session = Depends(get_db)):
     try:
-        return CodeWarsUtils.get_language_scores(user_id, lang_id, db)
+        return CodeWarsService.get_language_scores(user_id, lang_id, db)
     except HTTPException as ex:
         raise ex
 
 
 @router.post("/LanguageScores/{user_id}")
-async def create_language_scores(user_id: int, language_score: LanguageScore,
+async def create_language_scores(user_id: int,
+                                 language_score: LanguageScoreSchema,
                                  db: Session = Depends(get_db)):
     try:
-        lang_score_id = CodeWarsUtils.create_language_scores(user_id,
-                                                             language_score, db)
+        lang_score_id = CodeWarsService.create_language_scores(user_id,
+                                                               language_score,
+                                                               db)
     except HTTPException as ex:
         raise ex
 

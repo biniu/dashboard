@@ -3,10 +3,9 @@ from datetime import datetime
 from fastapi import Depends
 from requests import Session
 
-from app.database import get_db
-from app.routers.CodeWars import CodeWarsUtils
+from app.db import get_db
 from app.routers.CodeWars.CodeWarsInterface import CodeWarsInterface
-from app.routers.CodeWars.CodeWarsModels import CodeWarsUser, \
+from app.routers.CodeWars.model import CodeWarsUser, \
     CodeWarsUserStatistic, LanguageInfo, LanguageScore
 
 

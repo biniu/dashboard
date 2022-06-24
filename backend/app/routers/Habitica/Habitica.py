@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.database import engine, get_db
+from app.db import engine, get_db
 from app.routers.Habitica import HabiticaModels, HabiticaSync, HabiticaUtils
 from app.routers.Habitica.HabiticaModels import HabiticaUser, HabiticaTodo, HabiticaHabit, HabiticaDaily
 

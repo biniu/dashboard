@@ -1,14 +1,13 @@
-from datetime import datetime, date
+from datetime import datetime
 
-from pydantic import BaseModel
 from sqlalchemy import ForeignKey, Column, Integer, String, DATE
 from sqlalchemy.orm import relationship
 
-from app.database import Base
+from app.db import Base
 
 
-class CodeWarsUsers(Base):
-    __tablename__ = "CodeWarsUsers"
+class CodeWarsUser(Base):
+    __tablename__ = "CodeWarsUser"
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
@@ -17,8 +16,8 @@ class CodeWarsUsers(Base):
         return f"ID {self.id} {self.name}"
 
 
-class CodeWarsUserStatistics(Base):
-    __tablename__ = "CodeWarsUserStatistics"
+class CodeWarsUserStatistic(Base):
+    __tablename__ = "CodeWarsUserStatistic"
 
     id = Column(Integer, primary_key=True, index=True)
     honor = Column(Integer)
@@ -27,15 +26,15 @@ class CodeWarsUserStatistics(Base):
     last_update = Column(DATE,
                          server_default=datetime.today().strftime('%Y-%m-%d'))
 
-    user_id = Column(Integer, ForeignKey(CodeWarsUsers.id))
-    user = relationship("CodeWarsUsers")
+    user_id = Column(Integer, ForeignKey(CodeWarsUser.id))
+    user = relationship("CodeWarsUser")
 
     def __str__(self):
         return f"ID {self.id} user [{self.user}] date {self.last_update} honor {self.honor}"
 
 
-class LanguageInfos(Base):
-    __tablename__ = "LanguageInfos"
+class LanguageInfo(Base):
+    __tablename__ = "LanguageInfo"
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
@@ -44,8 +43,8 @@ class LanguageInfos(Base):
         return f"ID {self.id} {self.name}"
 
 
-class LanguageScores(Base):
-    __tablename__ = "LanguageScores"
+class LanguageScore(Base):
+    __tablename__ = "LanguageScore"
 
     id = Column(Integer, primary_key=True, index=True)
     score = Column(Integer)
@@ -53,33 +52,8 @@ class LanguageScores(Base):
     last_update = Column(DATE,
                          server_default=datetime.today().strftime('%Y-%m-%d'))
 
-    user_id = Column(Integer, ForeignKey(CodeWarsUsers.id))
-    user = relationship("CodeWarsUsers")
+    user_id = Column(Integer, ForeignKey(CodeWarsUser.id))
+    user = relationship("CodeWarsUser")
 
-    lang_id = Column(Integer, ForeignKey(LanguageInfos.id))
-    lang = relationship("LanguageInfos")
-
-
-class CodeWarsUser(BaseModel):
-    name: str
-
-
-class CodeWarsUserStatistic(BaseModel):
-    honor: int
-    leaderboard_position: int
-    kata_completed: int
-
-    last_update: date
-
-
-class LanguageInfo(BaseModel):
-    name: str
-
-
-class LanguageScore(BaseModel):
-    score: int
-    rank: int
-
-    lang_id: int
-
-    last_update: date
+    lang_id = Column(Integer, ForeignKey(LanguageInfo.id))
+    lang = relationship("LanguageInfo")
