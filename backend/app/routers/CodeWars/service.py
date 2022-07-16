@@ -1,4 +1,5 @@
-from datetime import datetime
+from datetime import datetime, date
+from pprint import pprint
 from typing import List
 
 from fastapi import Depends, HTTPException
@@ -54,8 +55,9 @@ class CodeWarsService:
         return [CodeWarsUserSchema(**i.__dict__) for i in resp]
 
     @staticmethod
-    def create_user(user: CodeWarsUserSchema, db: Session = Depends(get_db)):
-        if CodeWarsService.user_with_name_exist(user.name, db):
+    async def create_user(user: CodeWarsUserSchema,
+                          db: Session = Depends(get_db)):
+        if await CodeWarsService.user_with_name_exist(user.name, db):
             raise HTTPException(status_code=400, detail="User already exists")
 
         user_info_model = CodeWarsUser()
@@ -73,8 +75,8 @@ class CodeWarsService:
         return created_user.id
 
     @staticmethod
-    def get_user_statistics(user_id: int, db: Session = Depends(get_db)):
-        if not CodeWarsService.user_with_id_exist(user_id, db):
+    async def get_user_statistics(user_id: int, db: Session = Depends(get_db)):
+        if not await CodeWarsService.user_with_id_exist(user_id, db):
             raise HTTPException(status_code=400,
                                 detail=f"User with ID {user_id} not exist")
 
@@ -83,17 +85,20 @@ class CodeWarsService:
         return user_statistics.all()
 
     @staticmethod
-    def create_user_statistics(user_id: int,
-                               user_statistics: CodeWarsUserStatisticSchema,
-                               db: Session = Depends(get_db)) -> None:
+    async def create_user_statistics(user_id: int,
+                                     user_statistics: CodeWarsUserStatisticSchema,
+                                     db: Session = Depends(get_db)) -> None:
         print("create_user_statistics")
-        if not CodeWarsService.user_with_id_exist(user_id, db):
+        if not await CodeWarsService.user_with_id_exist(user_id, db):
             raise HTTPException(status_code=400,
                                 detail=f"User with ID {user_id} not exist")
 
         if user_statistics.last_update:
             print("data from parm")
-            statistic_date = user_statistics.last_update
+            if isinstance(user_statistics.last_update, str):
+                statistic_date = datetime.strptime(user_statistics.last_update, '%Y-%m-%d').date()
+            else:
+                statistic_date = user_statistics.last_update
         else:
             print("create new date")
             statistic_date = datetime.today().strftime('%Y-%m-%d')
@@ -122,12 +127,12 @@ class CodeWarsService:
         db.commit()
 
     @staticmethod
-    def get_language_infos(db: Session = Depends(get_db)):
+    async def get_language_infos(db: Session = Depends(get_db)):
         return db.query(LanguageInfo).all()
 
     @staticmethod
-    def create_language_infos(language_info: LanguageInfoSchema,
-                              db: Session = Depends(get_db)):
+    async def create_language_infos(language_info: LanguageInfoSchema,
+                                    db: Session = Depends(get_db)):
         if db.query(LanguageInfo).filter(
                 LanguageInfo.name == language_info.name).first():
             raise HTTPException(status_code=400,
@@ -146,7 +151,7 @@ class CodeWarsService:
         return created_language.id
 
     @staticmethod
-    def get_languages_scores(user_id: int, db: Session = Depends(get_db)):
+    async def get_languages_scores(user_id: int, db: Session = Depends(get_db)):
         if not db.query(CodeWarsUser) \
                 .filter(CodeWarsUser.id == user_id).first():
             raise HTTPException(status_code=400,
@@ -185,9 +190,9 @@ class CodeWarsService:
             .filter(LanguageScore.user_id == user_id).all()
 
     @staticmethod
-    def create_language_scores(user_id: int,
-                               language_score: LanguageScoreSchema,
-                               db: Session = Depends(get_db)):
+    async def create_language_scores(user_id: int,
+                                     language_score: LanguageScoreSchema,
+                                     db: Session = Depends(get_db)):
         if not db.query(CodeWarsUser) \
                 .filter(CodeWarsUser.id == user_id).first():
             raise HTTPException(status_code=400,
@@ -201,7 +206,10 @@ class CodeWarsService:
 
         if language_score.last_update:
             print("data from parm")
-            statistic_date = language_score.last_update
+            if isinstance(language_score.last_update, str):
+                statistic_date = datetime.strptime(language_score.last_update, '%Y-%m-%d').date()
+            else:
+                statistic_date = language_score.last_update
         else:
             print("create new date")
             statistic_date = datetime.today().strftime('%Y-%m-%d')
