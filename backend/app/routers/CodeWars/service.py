@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import List
 
 from fastapi import Depends, HTTPException
 from sqlalchemy import select
@@ -13,40 +14,44 @@ from .schema import CodeWarsUserSchema, \
 
 class CodeWarsService:
     @staticmethod
-    def get_user_id(user: str, db: Session = Depends(get_db)) -> bool:
-        return db.query(CodeWarsUser).filter(
-            CodeWarsUser.name == user).first().id
-
-    @staticmethod
-    def user_with_name_exist(user: str, db: Session = Depends(get_db)) -> bool:
+    async def user_with_name_exist(user: str,
+                                   db: Session = Depends(get_db)) -> bool:
         if db.query(CodeWarsUser).filter(
                 CodeWarsUser.name == user).first():
             return True
         return False
 
     @staticmethod
-    def user_with_id_exist(user_id: int, db: Session = Depends(get_db)) -> bool:
+    async def user_with_id_exist(user_id: int,
+                                 db: Session = Depends(get_db)) -> bool:
         if db.query(CodeWarsUser).filter(
                 CodeWarsUser.id == user_id).first():
             return True
         return False
 
     @staticmethod
-    def lang_with_name_exist(language_name: str,
-                             db: Session = Depends(get_db)) -> bool:
+    async def lang_with_name_exist(language_name: str,
+                                   db: Session = Depends(get_db)) -> bool:
         if db.query(LanguageInfo).filter(
                 LanguageInfo.name == language_name).first():
             return True
         return False
 
     @staticmethod
-    def get_lang_id(language_name: str, db: Session = Depends(get_db)) -> bool:
+    async def get_user_id(user: str, db: Session = Depends(get_db)) -> int:
+        return db.query(CodeWarsUser).filter(
+            CodeWarsUser.name == user).first().id
+
+    @staticmethod
+    async def get_lang_id(language_name: str,
+                          db: Session = Depends(get_db)) -> int:
         return db.query(LanguageInfo).filter(
             LanguageInfo.name == language_name).first().id
 
     @staticmethod
-    def get_users(db: Session = Depends(get_db)):
-        return db.query(CodeWarsUser).all()
+    async def get_all_users(session: Session) -> List[CodeWarsUserSchema]:
+        resp = session.query(CodeWarsUser).all()
+        return [CodeWarsUserSchema(**i.__dict__) for i in resp]
 
     @staticmethod
     def create_user(user: CodeWarsUserSchema, db: Session = Depends(get_db)):

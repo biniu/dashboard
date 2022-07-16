@@ -29,7 +29,7 @@ async def sync(db: Session = Depends(get_db)):
 
 @router.get("/users")
 async def read_users(db: Session = Depends(get_db)):
-    return CodeWarsService.get_users(db)
+    return CodeWarsService.get_all_users(db)
 
 
 @router.post("/users")
