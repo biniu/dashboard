@@ -1,10 +1,11 @@
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, Union
 
 from fastapi import Depends, status, APIRouter, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
 from passlib.context import CryptContext
+
 from sqlalchemy.orm import Session
 
 from app.db import get_db
@@ -19,10 +20,28 @@ bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="token")
 
 router = APIRouter(
-    prefix="/User",
     tags=["User"],
     responses={404: {"description": "Not found"}}
 )
+
+
+from pydantic import BaseModel
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    username: Union[str, None] = None
+
+
+class UserInDB(User):
+    hashed_password: str
+
+
+
 
 
 def get_password_hash(password):
@@ -58,6 +77,7 @@ def create_access_token(username: str, user_id: int,
 
 
 async def get_current_user(token: str = Depends(oauth2_bearer)):
+    print("aaaaaaaaaaaaa")
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
@@ -67,6 +87,12 @@ async def get_current_user(token: str = Depends(oauth2_bearer)):
         return {"username": username, "id": user_id}
     except JWTError:
         raise get_user_exception()
+
+
+async def get_current_active_user(current_user: User = Depends(get_current_user)):
+    if current_user.is_active:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user
 
 
 @router.post("/create/user")
@@ -82,7 +108,7 @@ async def create_new_user(create_user: UserSchema,
     db.commit()
 
 
-@router.post("/token")
+@router.post("/token", response_model=Token)
 async def login_for_access_token(
         form_data: OAuth2PasswordRequestForm = Depends(),
         db: Session = Depends(get_db)):
@@ -92,7 +118,8 @@ async def login_for_access_token(
     token_expires = timedelta(minutes=20)
     token = create_access_token(user.username, user.id,
                                 expires_delta=token_expires)
-    return {"token": token}
+    return {"access_token": token, "token_type": "bearer"}
+    # return {"token": token}
 
 
 
@@ -100,6 +127,7 @@ async def login_for_access_token(
 async def read_todo(todo_id: int,
                     user: dict = Depends(get_current_user),
                     db: Session = Depends(get_db)):
+    print("read_todo")
     if user is None:
         raise get_user_exception()
     out = [
