@@ -38,6 +38,7 @@ def authenticate_user(username: str, password: str, db):
         .filter(User.username == username) \
         .first()
 
+    # todo: rise exception instead of return false
     if not user:
         return False
     if not verify_password(password, user.hashed_password):
@@ -53,12 +54,12 @@ def create_access_token(username: str, user_id: int,
     else:
         expire = datetime.utcnow() + timedelta(minutes=15)
     encode.update({"exp": expire})
-    return jwt.encode(encode, SECRET_KEY, )#algoritm=ALGORIHM)
+    return jwt.encode(encode, SECRET_KEY, algorithm=ALGORITHM)
 
 
 async def get_current_user(token: str = Depends(oauth2_bearer)):
     try:
-        payload = jwt.decode(token, SECRET_KEY,) # algorothms=[ALGOTIRHM])
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
         user_id: int = payload.get("id")
         if username is None or user_id is None:
@@ -91,7 +92,7 @@ async def login_for_access_token(
     token_expires = timedelta(minutes=20)
     token = create_access_token(user.username, user.id,
                                 expires_delta=token_expires)
-    return token
+    return {"token": token}
 
 
 
