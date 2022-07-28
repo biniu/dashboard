@@ -25,6 +25,12 @@ router = APIRouter(
 )
 
 
+token_router = APIRouter(
+    tags=["token"],
+    responses={404: {"description": "Not found"}}
+)
+
+
 from pydantic import BaseModel
 
 
@@ -108,7 +114,7 @@ async def create_new_user(create_user: UserSchema,
     db.commit()
 
 
-@router.post("/token", response_model=Token)
+@token_router.post("/token", response_model=Token)
 async def login_for_access_token(
         form_data: OAuth2PasswordRequestForm = Depends(),
         db: Session = Depends(get_db)):
@@ -119,7 +125,6 @@ async def login_for_access_token(
     token = create_access_token(user.username, user.id,
                                 expires_delta=token_expires)
     return {"access_token": token, "token_type": "bearer"}
-    # return {"token": token}
 
 
 
