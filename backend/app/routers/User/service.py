@@ -8,10 +8,12 @@ from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
 from app.db import get_db
-# file with DB models
 from .model import User
 from .schema import UserSchema
 
+
+# todo move to utils
+# todo create normal key
 SECRET_KEY = "secret_key"
 ALGORITHM = "HS256"
 
@@ -21,10 +23,12 @@ oauth2_bearer = OAuth2PasswordBearer(tokenUrl="token")
 
 class UserService:
 
+    # todo move to utils
     @staticmethod
     def get_password_hash(password):
         return bcrypt_context.hash(password)
 
+    # todo move to utils
     @staticmethod
     def verify_password(plain_password, hashed_password):
         return bcrypt_context.verify(plain_password, hashed_password)
@@ -76,6 +80,7 @@ class UserService:
         except JWTError:
             raise UserService.get_user_exception()
 
+    # todo move to utils
     @staticmethod
     def get_user_exception():
         return HTTPException(
@@ -84,6 +89,7 @@ class UserService:
             headers={"WWW-Authenticate": "Bearer"}
         )
 
+    # todo move to utils
     @staticmethod
     def get_token_exception():
         return HTTPException(
@@ -92,6 +98,7 @@ class UserService:
             headers={"WWW-Authenticate": "Bearer"}
         )
 
+    # todo move to utils
     @staticmethod
     def http_exception():
         return HTTPException(status_code=404, detail="Todo not found")
